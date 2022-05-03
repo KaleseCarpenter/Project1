@@ -1,11 +1,11 @@
 .screen{
     border:solid rgb(174, 103, 219);
-    border-radius:32px;
-    color:lime;
+    border-radius:25px;
+    color:rgb(102, 89, 116);
     text-align:center;
     padding:1em;
     margin:1em;
-    height:22vh;
+    height:20vh;
 }
 
 .btns{
@@ -16,4 +16,9 @@
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-align: center;
     font-size: 50px;
+}
+
+.plyrsContainer{
+    display: flex;
+    justify-content: space-around;
 }
