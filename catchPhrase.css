@@ -1,0 +1,19 @@
+.screen{
+    border:solid rgb(174, 103, 219);
+    border-radius:32px;
+    color:lime;
+    text-align:center;
+    padding:1em;
+    margin:1em;
+    height:22vh;
+}
+
+.btns{
+    text-align:center;
+}
+
+.title{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    font-size: 50px;
+}
