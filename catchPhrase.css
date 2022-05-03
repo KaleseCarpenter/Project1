@@ -1,11 +1,21 @@
-.screen{
+.textScreen{
     border:solid rgb(174, 103, 219);
-    border-radius:25px;
+    border-radius:15px;
     color:rgb(102, 89, 116);
     text-align:center;
     padding:1em;
     margin:1em;
     height:20vh;
+}
+
+.answerBox{
+    border:solid rgb(9, 7, 11);
+    border-radius:15px;
+    color:rgb(102, 89, 116);
+    text-align:center;
+    padding:1em;
+    margin:1em;
+    height:2vh;
 }
 
 .btns{
@@ -22,3 +32,5 @@
     display: flex;
     justify-content: space-around;
 }
+
+

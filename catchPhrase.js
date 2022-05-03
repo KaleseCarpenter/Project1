@@ -1,6 +1,10 @@
 /*  Create a while loop for the phrases so that it keeps showing new
 phrases after every answer until the Player 1 has reached 5 turns.*/
 
+Phrases ={
+    common phrases: "When it rains,____", 
+    }
+
 /* create a prompt or form so the player can enter their answer after each phrase pops up*/
 
 
