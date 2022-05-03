@@ -1,12 +1,55 @@
+// Create a function to start the game with the play button
+
+// function playBtn() {
+//     document.getElementById("letsPlay").innerHTML = "Hello World";
+//   }
+
+
+
 /*  Create a while loop for the phrases so that it keeps showing new
 phrases after every answer until the Player 1 has reached 5 turns.*/
+// random value generated with Math.random()
 
-Phrases ={
-    common phrases: "When it rains,____", 
-    }
+​var catchPhrases = 'When it rains____',"It's raining ___ & ___", "Kill two birds ___", "___ ___ the bush",
+     "___ ____ the doubt", "It's ___ ____ science", "__ ___, No gain",
+     "A ___ __ disguise", "Break __ ___",  "A dime _ ___";
+var i=0;
+while (catchPhrases.length) {
+  var phraseCaught = catchPhrases.pop();
+  document.write("<p>" + phraseCaught + "</p>");
+}
+//The while loop loops through a block of code as long as a specified condition is true.
+
+// ​let text = "";
+// let i = 0;
+// while (i < 10) {
+//   text += "phrases" + i;
+//   i++;
+// }
+// document.getElementById("letsPlay").innerHTML = text;
+
+
+
+// const result = words.filter(word => word.length > 1);
+
+// console.log(result);
+
+
+
+
+
 
 /* create a prompt or form so the player can enter their answer after each phrase pops up*/
-
+// ​var correct = "AA";
+// var guess = "";
+// while (guess != correct){
+//   guess = prompt ("Question?", "");
+//   if (guess == correct){
+//     alert ("Correct");
+//   } else {
+//     alert ("that's not it...");
+//   }
+// }
 
 /* Create a new while loop for Player 2 that runs 5 times */
 
