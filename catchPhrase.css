@@ -1,11 +1,16 @@
 .textScreen{
     border:solid rgb(174, 103, 219);
+    font-size: 50px;
     border-radius:15px;
     color:rgb(102, 89, 116);
     text-align:center;
     padding:1em;
     margin:1em;
     height:20vh;
+}
+
+.plyrOneClicksHidden{
+
 }
 
 .answerBox{

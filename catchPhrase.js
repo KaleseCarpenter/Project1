@@ -1,31 +1,40 @@
-// Create a function to start the game with the play button
+// Create a function to start the game with the play button and display random phrase
 
-// function playBtn() {
-//     document.getElementById("letsPlay").innerHTML = "Hello World";
-//   }
+const Player1 = document.getElementById("playerUno");
+Player1.addEventListener("click", playBtn);
+const wordsScreen = document.getElementById("wordsScreen")
+  const catchPhrases = [
+  "When it rains __ ___",
+  "It's raining ___ & ___", 
+  "Kill two birds ___ __ ____",
+  "___ ____ the bush",
+  "____ ___ the doubt",
+  "It's __ ____ science",
+  "__ ___, No gain",
+  "A _____ __ disguise", 
+  "Break __ ___",  
+  "A dime _ ___",
+  "Make _ ___ ____ short",
+  "You're pulling __ ___",
+  "Feeling under __ _____",
+  "___ ___ when you're having fun"
 
-const catchPhrases = [
-    "When it rains____",
-    "It's raining ___ & ___", 
-    "Kill two birds ___",
-    "___ ___ the bush",
-    "___ ____ the doubt",
-    "It's ___ ____ science",
-    "__ ___, No gain",
-    "A ___ __ disguise", 
-    "Break __ ___",  
-    "A dime _ ___",
-];
+]
+  function  playBtn() {
+    let phraseCaught = catchPhrases[Math.floor(Math.random() * catchPhrases.length)]
+    wordsScreen.innerHTML= phraseCaught
 
-const playBtn = () => {
-    catchPhrases.forEach(element => {
-      document.getElementById('wordsScreen').innerHTML +=
-      `<div>${element}</div><br />`;
-      // here result is the id of the div present in the DOM
-   });
-};
+    
 
 
+    // catchPhrases.forEach((element)=>{
+    //   wordsScreen.innerHTML += 
+    // })
+}
+  
+
+// add counter to the Player1 button set = to 0 or 1, if counter = once they get to 5, next layer turn.
+// if counter === 5 diplayer 2 turn.
 
 
 /*  Create a while loop for the phrases so that it keeps showing new
@@ -70,25 +79,25 @@ while (catchPhrases.length) {
 /*The while loop loops through a block of code as long as a specified condition is true.*/
 
 
-​let text =  [
-    "When it rains____",
-    "It's raining ___ & ___", 
-    "Kill two birds ___",
-    "___ ___ the bush",
-    "___ ____ the doubt",
-    "It's ___ ____ science",
-    "__ ___, No gain",
-    "A ___ __ disguise", 
-    "Break __ ___",  
-    "A dime _ ___",
+// ​let text =  [
+//     "When it rains____",
+//     "It's raining ___ & ___", 
+//     "Kill two birds ___",
+//     "___ ___ the bush",
+//     "___ ____ the doubt",
+//     "It's ___ ____ science",
+//     "__ ___, No gain",
+//     "A ___ __ disguise", 
+//     "Break __ ___",  
+//     "A dime _ ___",
     
-    ];
-let i = 0;
-while (i < 6) {
-    document.write(".text" + i);
-  text += "phrases" + i;
-  i++;
-}
+//     ];
+// let i = 0;
+// while (i < 6) {
+//     document.write(".text" + i);
+//   text += "phrases" + i;
+//   i++;
+// }
 // document.getElementById("letsPlay").innerHTML = text;
 
 

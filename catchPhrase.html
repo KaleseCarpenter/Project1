@@ -17,10 +17,11 @@
 <!--------Score keeper for each player, how to align these on each side-->
 
     <div class="plyrsContainer">
-        <h5 class="playerOne">Player 2:  <span style="color:rgb(182, 94, 204);font-size:25px;"class="score"> 0 </span></h5>
+        <h5 class="playerOne">Player 1:  <span style="color:rgb(182, 94, 204);font-size:25px;"class="score"> 0 </span></h5>
         <h5 class="playerOne">Player 2:  <span style="color:rgb(182, 94, 204);font-size:25px;"class="score"> 0 </span></h5>
     </div>
-    
+      
+        
 
 
 <!-- Possibly a timer if I can figure out how to get it to work right -->
@@ -30,6 +31,8 @@
     </div>
 <!-- ------ Text box for the Phrases to show up in  --> 
     <div id="wordsScreen" class="textScreen"></div> 
+
+    <p class="plyrOneClicksHidden"><a id="pOneClicks" >0</a></p> 
 <!-- A prompt or text box for the user to type the answer in, **ONE CHANCE-->
      <div class="form">
         <label for="answerBox">Enter Your Answer: </label>
@@ -42,15 +45,14 @@
     
     <div class="btns">
         
-        <button onclick="playBtn()" class="play">PLAY</button>
+        <button onclick="playBtn()" id="playerUno" class="playerOne">PLAYER 1</button>
        
         <!-- I have to find the function to get it to skip to next phrase,
              possible 1 chance to skip if they don't the answer -->
-        <button class="next"> NEXT</button>
-        <button class="restart">TIE BREAKER</button>
+        <button class="playerTwo"> PLAYER 2</button>
+        <button id="letsPlay" class="restart">TIE BREAKER</button>
     </div>
-        
-        <p id="letsPlay"></p>
+    
 
 <!-- A prompt that comes up at the end that tells who was the winner with the high score -->
 
