@@ -1,9 +1,9 @@
 // Create a function to start the game with the play button and display random phrase
 
 const Player1 = document.getElementById("playerUno");
-Player1.addEventListener("click", playBtn);
+    Player1.addEventListener("click", playBtn);
 const wordsScreen = document.getElementById("wordsScreen")
-  const catchPhrases = [
+const catchPhrases = [
   "When it rains __ ___",
   "It's raining ___ & ___", 
   "Kill two birds ___ __ ____",
@@ -20,18 +20,33 @@ const wordsScreen = document.getElementById("wordsScreen")
   "___ ___ when you're having fun"
 
 ]
-  function  playBtn() {
+  var clicks = 0;
+    function  playBtn() {
     let phraseCaught = catchPhrases[Math.floor(Math.random() * catchPhrases.length)]
-    wordsScreen.innerHTML= phraseCaught
+      wordsScreen.innerHTML= phraseCaught
+      
+      clicks += .5;
+      document.getElementById("pOneClicks").innerHTML = clicks;
 
-    
-
-
+      if (clicks === 5) {
+      document.getElementById("playerUno").disabled = true;
+    }
     // catchPhrases.forEach((element)=>{
     //   wordsScreen.innerHTML += 
     // })
-}
-  
+};
+
+
+// function playBtn() {
+    
+//     document.getElementById("pOneClicks").innerHTML = clicks;
+    
+//   if (clicks == 5) {
+//   document.getElementById("playerUno").removeAttribute("onclick");
+//   }
+// };
+
+
 
 // add counter to the Player1 button set = to 0 or 1, if counter = once they get to 5, next layer turn.
 // if counter === 5 diplayer 2 turn.
