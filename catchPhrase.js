@@ -2,50 +2,47 @@
 
 const Player1 = document.getElementById("playerUno");
     Player1.addEventListener("click", playBtn);
-const wordsScreen = document.getElementById("wordsScreen")
-const catchPhrases = [
-  "When it rains __ ___",
-  "It's raining ___ & ___", 
-  "Kill two birds ___ __ ____",
-  "___ ____ the bush",
-  "____ ___ the doubt",
-  "It's __ ____ science",
-  "__ ___, No gain",
-  "A _____ __ disguise", 
-  "Break __ ___",  
-  "A dime _ ___",
-  "Make _ ___ ____ short",
-  "You're pulling __ ___",
-  "Feeling under __ _____",
-  "___ ___ when you're having fun"
 
-]
+const wordsScreen = document.getElementById("wordsScreen")
+catchPhrases = {
+  "when it rains __ ___": "it pours",
+  "wt's raining ___ & ___": "cats dogs",
+  "kill two birds ___ __ ____": "with one stone",
+  "___ ____ the bush": "beating around",
+  "____ ___ the doubt": "benefit of",
+  "it's __ ____ science": "not rocket",
+  "__ ___, no gain":"no pain",
+  "A _____ __ disguise": "blessing in", 
+  "break __ ___": "a leg",  
+  "A dime _ ___":"a dozen",
+  "make _ ___ ____ short": "a long story",
+  "you're pulling __ ___":"my leg",
+  "feeling under __ _____":"the weather",
+  "___ ___ when you're having fun": "time flies",
+
+}
   var clicks = 0;
-    function  playBtn() {
-    let phraseCaught = catchPhrases[Math.floor(Math.random() * catchPhrases.length)]
+    function playBtn() {
+      let phraseGuesses = Object.keys(catchPhrases)
+      // console.log it to see the answers
+      console.log(phraseGuesses)
+    let phraseCaught = phraseGuesses[Math.floor(Math.random() * phraseGuesses.length)]
       wordsScreen.innerHTML= phraseCaught
-      
+      //this is counting the amount of time the player clicks the button, it will disable the button after 5 turns
       clicks += .5;
       document.getElementById("pOneClicks").innerHTML = clicks;
-
-      if (clicks === 5) {
+      //if amount of clicks is = to 5 then disable the button, it's player 2's turn.
+      if (clicks === 6) {
       document.getElementById("playerUno").disabled = true;
+        let playerDosTurn = prompt(" Player 2's Turn. You Ready? ");
+
+        if (playerDosTurn === "yes,Yes") {
+      let nextPLayer = document.querySelector(".playerTwo");
     }
     // catchPhrases.forEach((element)=>{
     //   wordsScreen.innerHTML += 
     // })
 };
-
-
-// function playBtn() {
-    
-//     document.getElementById("pOneClicks").innerHTML = clicks;
-    
-//   if (clicks == 5) {
-//   document.getElementById("playerUno").removeAttribute("onclick");
-//   }
-// };
-
 
 
 // add counter to the Player1 button set = to 0 or 1, if counter = once they get to 5, next layer turn.
