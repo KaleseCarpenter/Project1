@@ -1,7 +1,7 @@
 // Create an array of words
 var words = catchPhrases = [
     "when it rains it pours",
-    "wt's raining cats dogs",
+    "it's raining cats dogs",
     "kill two birds with one stone",
     "beating around the bush",
     "benefit of the doubt",
