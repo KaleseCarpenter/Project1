@@ -2,87 +2,110 @@
 
 // const Player1 = document.getElementById("playerUno");
 //     Player1.addEventListener("click", playBtn);
-
 // const wordsScreen = document.getElementById("wordsScreen")
-// 
 
-let catchPhrases = [
-  { catchPhrases: "When it rains", answer: "it pours" },
-  { catchPhrases: "it's raining", answer:  "cats dogs"},
-  { catchPhrases: "kill two birds", answer: "with one stone"},
-  { catchPhrases: "beating around", answer: "the bush"},
-  { catchPhrases: "benefit of", answer:"the doubt"},
-  { catchPhrases: "it's not _ science", answer:"rocket"},
-  { catchPhrases: "___ ___ no gain", answer: "no pain"},
-  { catchPhrases: "A blessing", answer: "in disguise"}, 
-  { catchPhrases: "break a", answer: "leg"},  
-  { catchPhrases: "A dime", answer: "a dozen"},
-  { catchPhrases: "make a long", answer: "story short"},
-  { catchPhrases: "you're pulling", answer: "my leg"},
-  { catchPhrases: "feeling under", answer: "the weather",
-  { catchPhrases: "time flies when", answer: "you're having fun"},
-  { catchPhrases: "that's __ ___ straw", answer: "the last"},
-  { catchPhrases: "off the", answer: "hook"},
-  { catchPhrases: "actions speak louder", answer: "than words"},
-  { catchPhrases: "bite off more than you", answer: "can chew"},
-  { catchPhrases: "skating on", answer: "thin ice"},
-  { catchPhrases: "on cloud", answer: "nine"},
-  { catchPhrases: "through thick", answer: "and thin"},
-  { catchPhrases: "that ship", answer: " has sailed"},
-  { catchPhrases: "the pot calling", answer: "the kettle black"},
-  { catchPhrases: "calm before", answer: "the storm"},
-  { catchPhrases: "curiosity killed the", answer: "cat"},
-  { catchPhrases: "burning", answer: "bridges"},
-  { catchPhrases: "head in the", answer: "clouds"},
-  { catchPhrases: "not playing with a full", answer: "deck"},
-  { catchPhrases: "jump on the band", answer: "wagon"},
-  { catchPhrases: "like two peas", answer: "in a pod"},
-  { catchPhrases: "through thick", answer: "and thin"},
-  { catchPhrases: "it takes __ ___ tango", answer: "two to" },
-  { catchPhrases: "straight from the horse's", answer: "mouth"},
-  { catchPhrases: "every dog has", answer: "his day"},
-  { catchPhrases: "keeping up with", answer: "the joneses"},
-  { catchPhrases: "if it ain't broke", answer: "don't fix it"}
+// Start Game
 
-];
-
-
-
-//Start Game
 function playBtn() {
   let text;
-  let person = prompt("Please enter your name:", "Harry Potter");
-  if (person == null || person == "") {
+  let person = prompt(" enter your name:", "Enter Your Name");
+    if (person == null || person == "") {
     text = "User cancelled the prompt.";
   } else {
-    text = "Hello " + person + ". You will be guessing the missing words from popular phrases. " +
-     "<br>GOOD LUCK!";
+    text =
+      "Hello " +
+      person +
+      ". You will be guessing the missing words from popular phrases. " +
+      "<br>GOOD LUCK!";
+    document.getElementById("para").innerHTML = text;
   }
-  document.getElementById("para").innerHTML = text;
- 
-}
 
-
-
-const randomQuestions = () => {
-  const index = Math.floor(Math.random() * catchPhrases.length);
-  const question = catchPhrases.splice(index, 1);
-  return question[0];
-
-}
-
-while(catchPhrases.length) {
-  const question = randomQuestions();
-  const askedQuestion = prompt(question.question);
-  if (askedQuestion === null) {
-    console.log("User clicked cancel");
+  let q1 = prompt("When it rains");
+    if (q1 == null || q1 == "it pours") {
+      alert("You got it " + person + "!" + " 10 Points");
   } else {
-    console.log(askedQuestion.toLowerCase() === question.answer);
+      alert(
+      "Wrong Answer, Zero Points!" + "\nCorrect Answer: When It rains it pours"
+    );
   }
+  let q2 = prompt("Beating around");
+    if (q2 == null || q1 == "the bush") {
+      alert("Woohoo! " + person + "!" + " 10 Points");
+  } else {
+      alert(
+      "Wrong Answer, Zero Points!" + "\nCorrect Answer: Beating around the bush");
+  }
+  let q3 = prompt("A blessing");
+    if (q3 == null || q1 == "in disguise") {
+      alert("Woohoo! " + person + "!"+ " 10 Points");
+  } else {
+      alert("Wrong Answer, Zero Points!" +
+        "\nCorrect Answer: A blessing in disguise ");
+  }
+
+  
+
+
 }
 
+// let catchPhrases = [
+//       { catchPhrases: "When it rains", answer: "it pours" },
+//       { catchPhrases: "it's raining", answer:  "cats dogs"},
+//       { catchPhrases: "kill two birds", answer: "with one stone"},
+//       { catchPhrases: "beating around", answer: "the bush"},
+//       { catchPhrases: "benefit of", answer:"the doubt"},
+//       { catchPhrases: "it's not _ science", answer:"rocket"},
+//       { catchPhrases: "___ ___ no gain", answer: "no pain"},
+//       { catchPhrases: "A blessing", answer: "in disguise"},
+//       { catchPhrases: "break a", answer: "leg"},
+//       { catchPhrases: "A dime", answer: "a dozen"},
+//       { catchPhrases: "make a long", answer: "story short"},
+//       { catchPhrases: "you're pulling", answer: "my leg"},
+//       { catchPhrases: "feeling under", answer: "the weather",
+//       { catchPhrases: "time flies when", answer: "you're having fun"},
+//       { catchPhrases: "that's __ ___ straw", answer: "the last"},
+//       { catchPhrases: "off the", answer: "hook"},
+//       { catchPhrases: "actions speak louder", answer: "than words"},
+//       { catchPhrases: "bite off more than you", answer: "can chew"},
+//       { catchPhrases: "skating on", answer: "thin ice"},
+//       { catchPhrases: "on cloud", answer: "nine"},
+//       { catchPhrases: "through thick", answer: "and thin"},
+//       { catchPhrases: "that ship", answer: " has sailed"},
+//       { catchPhrases: "the pot calling", answer: "the kettle black"},
+//       { catchPhrases: "calm before", answer: "the storm"},
+//       { catchPhrases: "curiosity killed the", answer: "cat"},
+//       { catchPhrases: "burning", answer: "bridges"},
+//       { catchPhrases: "head in the", answer: "clouds"},
+//       { catchPhrases: "not playing with a full", answer: "deck"},
+//       { catchPhrases: "jump on the band", answer: "wagon"},
+//       { catchPhrases: "like two peas", answer: "in a pod"},
+//       { catchPhrases: "through thick", answer: "and thin"},
+//       { catchPhrases: "it takes __ ___ tango", answer: "two to" },
+//       { catchPhrases: "straight from the horse's", answer: "mouth"},
+//       { catchPhrases: "every dog has", answer: "his day"},
+//       { catchPhrases: "keeping up with", answer: "the joneses"},
+//       { catchPhrases: "if it ain't broke", answer: "don't fix it"}
 
+//     ];
 
+// // const randomQuestions = () => {
+// //   const index = Math.floor(Math.random() * catchPhrases.length);
+// //   const question = catchPhrases.splice(index, 1);
+// //   return question[0];
+// //   question = prompt("Please enter your name:", "Harry Potter");
+
+// // }
+
+// while(catchPhrases.length) {
+//   const question = randomQuestions();
+//   const askedQuestion = prompt(question.question);
+//   if (askedQuestion === null) {
+//     console.log("User clicked cancel");
+//   } else {
+//     console.log(askedQuestion.toLowerCase() === question.answer);
+//   }
+// }
+// const askQuestions = prompt(question);
 
 // var gamesWon = 0;
 // var phraseGuesses =[]; // variable for current letters guessed
@@ -90,8 +113,6 @@ while(catchPhrases.length) {
 // var usedPhrases = [];//variable to get NEW Phrase to guess
 // var phrasePredict; // stores the value for catchPhrases[Mathfloor & random]
 // var predictNum;// variable to store amount of guesses you get based on the length of the phrase
-
-
 
 // //Begin Playing
 // function playerStart() {
@@ -106,7 +127,7 @@ while(catchPhrases.length) {
 // if (phrasePredict.length <= 5) {
 //   predictNum = 3
 // } else if (phrasePredict.length >5 && phrasePredict.length <= 7) {
-  
+
 //   // multiply by .5
 //   predictNum = Math.floor(phrasePredict.length * .5)
 // } else if (phrasePredict.length >7 && phrasePredict.length <= 10) {
@@ -116,11 +137,6 @@ while(catchPhrases.length) {
 // } else if (phrasePredict.length >14) {
 //   predictNum = 8;
 // }
-
-
-
-
-
 
 /*var clicks = 0;
     function playBtn() {
@@ -145,32 +161,16 @@ while(catchPhrases.length) {
     // })
 };*/
 
-
 // add counter to the Player1 button set = to 0 or 1, if counter = once they get to 5, next layer turn.
 // if counter === 5 diplayer 2 turn.
 
-
-
-
-
-
-
-
-
 /*The while loop loops through a block of code as long as a specified condition is true.*/
 
-
-
-
-
 /* Create a new while loop for Player 2 that runs 5 times */
-
 
 /* Create a function that compares the scores of Player 1 & 2 and gives highest score using Math.max
 Announces the winner with an alert */
 
 // Create a funtion for a possible bonus round if they tie in score
-
-
 
 /*Play again button to restart the game*/
