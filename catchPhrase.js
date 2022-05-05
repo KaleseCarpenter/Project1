@@ -19,8 +19,13 @@ function playBtn() {
       "<br>GOOD LUCK!";
     document.getElementById("para").innerHTML = text;
   }
+   setTimeout(resume,1000)
+}
+//Resume Game
+function resume() {
 
-  let q1 = prompt("When it rains");
+
+ let q1 = prompt("When it rains");
     if (q1 == null || q1 == "it pours") {
       alert("You got it " + person + "!" + " 10 Points");
   } else {
@@ -29,24 +34,53 @@ function playBtn() {
     );
   }
   let q2 = prompt("Beating around");
-    if (q2 == null || q1 == "the bush") {
+    if (q2 == null || q2 == "the bush") {
       alert("Woohoo! " + person + "!" + " 10 Points");
   } else {
       alert(
       "Wrong Answer, Zero Points!" + "\nCorrect Answer: Beating around the bush");
   }
   let q3 = prompt("A blessing");
-    if (q3 == null || q1 == "in disguise") {
+    if (q3 == null || q3 == "in disguise") {
       alert("Woohoo! " + person + "!"+ " 10 Points");
   } else {
       alert("Wrong Answer, Zero Points!" +
         "\nCorrect Answer: A blessing in disguise ");
   }
-
-  
-
-
+  let q4 = prompt("Skating on");
+    if (q4 == null || q4 == "thin ice") {
+      alert("Woohoo! " + person + "!"+ " 10 Points");
+  } else {
+      alert("Wrong Answer, Zero Points!" +
+        "\nCorrect Answer: Skating on thin ice");
+  }
+   
 }
+
+
+//  if(prompt === 5
+
+
+
+// const addScoreToPlyrUno = () =>{
+//   playerOne.score += 10
+
+//   populateScore()
+// }
+
+// const addScoreToPlyrUno = () =>{
+//   playerOne.score += 10
+
+//   populateScore()
+// }
+
+
+
+
+
+
+
+
 
 // let catchPhrases = [
 //       { catchPhrases: "When it rains", answer: "it pours" },
@@ -96,6 +130,11 @@ function playBtn() {
 
 // // }
 
+
+
+
+
+
 // while(catchPhrases.length) {
 //   const question = randomQuestions();
 //   const askedQuestion = prompt(question.question);
@@ -107,6 +146,10 @@ function playBtn() {
 // }
 // const askQuestions = prompt(question);
 
+
+
+
+
 // var gamesWon = 0;
 // var phraseGuesses =[]; // variable for current letters guessed
 // var gezWrd= []; // variable for current word I'm guessing
@@ -116,6 +159,9 @@ function playBtn() {
 
 // //Begin Playing
 // function playerStart() {
+
+
+
 
 // //Random word
 // /*  Create a loop for the phrases so that it keeps showing new
