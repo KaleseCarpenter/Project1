@@ -4,57 +4,83 @@
 //     Player1.addEventListener("click", playBtn);
 
 // const wordsScreen = document.getElementById("wordsScreen")
-var catchPhrases = [
-  "when it rains it pours",
-  "it's raining cats dogs",
-  "kill two birds with one stone",
-  "beating around the bush ",
-  "benefit of the doubt",
-  "it's not rocket science",
-  "no pain, no gain",
-  "A blessing in disguise", 
-  "break a leg",  
-  "A dime a dozen",
-  "make a long story short ",
-  "you're pulling my leg",
-  "feeling under the weather",
-  "time flies when you're having fun",
-  "that's the last straw",
-  "off the hook",
-  "actions speak louder than words",
-  "bite off more than you can chew",
-  "on thin ice",
-  "on cloud nine",
-  "through thick and thin",
-  "that ship has sailed",
-  "the pot calling the kettle black",
-  "calm before the storm",
-  "curiosity killed the cat",
-  "burn bridges",
-  "head in the clouds",
-  "not playing with a full deck",
-  "jump on the bandwagon",
-  "when in rome",
-  "like two peas in a pod",
-  "through thick and thin",
-  "it takes two to tango",
-  "straight from the horse's mouth",
-  "every dog has his day",
-  "keeping up with the joneses",
-  "if it ain't broke, don't fix it"
+// 
+
+let catchPhrases = [
+  { catchPhrases: "When it rains", answer: "it pours" },
+  { catchPhrases: "it's raining", answer:  "cats dogs"},
+  { catchPhrases: "kill two birds", answer: "with one stone"},
+  { catchPhrases: "beating around", answer: "the bush"},
+  { catchPhrases: "benefit of", answer:"the doubt"},
+  { catchPhrases: "it's not _ science", answer:"rocket"},
+  { catchPhrases: "___ ___ no gain", answer: "no pain"},
+  { catchPhrases: "A blessing", answer: "in disguise"}, 
+  { catchPhrases: "break a", answer: "leg"},  
+  { catchPhrases: "A dime", answer: "a dozen"},
+  { catchPhrases: "make a long", answer: "story short"},
+  { catchPhrases: "you're pulling", answer: "my leg"},
+  { catchPhrases: "feeling under", answer: "the weather",
+  { catchPhrases: "time flies when", answer: "you're having fun"},
+  { catchPhrases: "that's __ ___ straw", answer: "the last"},
+  { catchPhrases: "off the", answer: "hook"},
+  { catchPhrases: "actions speak louder", answer: "than words"},
+  { catchPhrases: "bite off more than you", answer: "can chew"},
+  { catchPhrases: "skating on", answer: "thin ice"},
+  { catchPhrases: "on cloud", answer: "nine"},
+  { catchPhrases: "through thick", answer: "and thin"},
+  { catchPhrases: "that ship", answer: " has sailed"},
+  { catchPhrases: "the pot calling", answer: "the kettle black"},
+  { catchPhrases: "calm before", answer: "the storm"},
+  { catchPhrases: "curiosity killed the", answer: "cat"},
+  { catchPhrases: "burning", answer: "bridges"},
+  { catchPhrases: "head in the", answer: "clouds"},
+  { catchPhrases: "not playing with a full", answer: "deck"},
+  { catchPhrases: "jump on the band", answer: "wagon"},
+  { catchPhrases: "like two peas", answer: "in a pod"},
+  { catchPhrases: "through thick", answer: "and thin"},
+  { catchPhrases: "it takes __ ___ tango", answer: "two to" },
+  { catchPhrases: "straight from the horse's", answer: "mouth"},
+  { catchPhrases: "every dog has", answer: "his day"},
+  { catchPhrases: "keeping up with", answer: "the joneses"},
+  { catchPhrases: "if it ain't broke", answer: "don't fix it"}
 
 ];
 
+
+
+//Start Game
 function playBtn() {
   let text;
   let person = prompt("Please enter your name:", "Harry Potter");
   if (person == null || person == "") {
     text = "User cancelled the prompt.";
   } else {
-    text = "Hello " + person + "! How are you today?";
+    text = "Hello " + person + ". You will be guessing the missing words from popular phrases. " +
+     "<br>GOOD LUCK!";
   }
-  document.getElementById("demo").innerHTML = text;
+  document.getElementById("para").innerHTML = text;
+ 
 }
+
+
+
+const randomQuestions = () => {
+  const index = Math.floor(Math.random() * catchPhrases.length);
+  const question = catchPhrases.splice(index, 1);
+  return question[0];
+
+}
+
+while(catchPhrases.length) {
+  const question = randomQuestions();
+  const askedQuestion = prompt(question.question);
+  if (askedQuestion === null) {
+    console.log("User clicked cancel");
+  } else {
+    console.log(askedQuestion.toLowerCase() === question.answer);
+  }
+}
+
 
 
 

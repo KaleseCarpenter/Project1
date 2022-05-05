@@ -9,24 +9,28 @@
     height:20vh;
 }
 
-
+.container{
+     justify-content: center;
+}
 
 .beginPlay{
     display: block;
-     width: 70%;
-    border: none;
+    width: 700px;
+    border-radius: 42px;
     background-color: #9404aa;
     color: white;
     padding: 14px 28px;
     font-size: 16px;
     cursor: pointer;
-    text-align: center
+   
+
 }
 
 #para{
     text-align: center;
     font-size: larger;
 }
+
 
 ​.beginPlay:hover {
     background-color: #ddd;
