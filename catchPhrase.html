@@ -30,36 +30,30 @@
    
     </div> -->
 <!-- ------ Text box for the Phrases to show up in  --> 
+    <div><h3>Games Won:  <span id="winsTtl" class=""></span></h3></div>
+
     <div id="wordsScreen" class="textScreen"></div> 
-    <p> <a id="pOneClicks">0</a></p> 
-<!-- A prompt or text box for the user to type the answer in, **ONE CHANCE-->
-    <div class="col-lg-12 text-center pb-3">
-    <br>
-        <div><h5>Word:  <span id="currentWord"></span></h5></div>
-    <br>
-        <div><h6>Games Won:  <span id="totalWins" class="varColor"></span></h6></div>
+    <!-- <p> <a id="pOneClicks">0</a></p> -->
+<!-- A span tag to add styling to words-->
     
-        <div><h6>Guesses Left:  <span id="remainingGuesses" class="varColor"></span></h6></div>
+    <div>
+    <br>
+
+
+        <div>Phrase:  <span id="currentWord"></span></div>
+    <br>
+        
     
-        <div><h6>Already Guessed:  <span id="guessedLetters" class="varColor"></span></h6></div>
+        <div>Guesses Left:  <span id="guessesLeft" class=""></span></div>
+    
+        <div>Letters Guessed:  <span id="phraseGuesses" class=""></span></div>
 
      </div>
 
 
-
-
-
-        <div class="form">
-        <label for="answerBox">Enter Your Answer: </label>
-        <input type = "text" id = "answerBox" class = "answerBox">
-        <input type = "submit" value = "Submit Answer" 
-               class = "answerSubmit" id = "goodGuess">
-        </div>
-
 <br><br>
     
     <div class="btns">
-        
         <button onclick="playBtn()" id="playerUno" class="playerOne">PLAYER 1</button>
         
         <!-- I have to find the function to get it to skip to next phrase,

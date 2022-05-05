@@ -53,11 +53,11 @@ var catchPhrases = [
 ];
 
 var gamesWon = 0;
-var phraseGuesses =[];
-var gezWrd= [];
-var usedGuessingWords = [];
-var phrasePredict;
-var predictNum;
+var phraseGuesses =[]; // variable for current letters guessed
+var gezWrd= []; // variable for current word I'm guessing
+var usedPhrases = [];//variable to get NEW Phrase to guess
+var phrasePredict; // stores the value for catchPhrases[Mathfloor & random]
+var predictNum;// variable to store amount of guesses you get based on the length of the phrase
 
 
 
@@ -74,6 +74,7 @@ phrasePredict = catchPhrases[Math.floor(Math.random() * catchPhrases.length)].to
 if (phrasePredict.length <= 5) {
   predictNum = 3
 } else if (phrasePredict.length >5 && phrasePredict.length <= 7) {
+  
   // multiply by .5
   predictNum = Math.floor(phrasePredict.length * .5)
 } else if (phrasePredict.length >7 && phrasePredict.length <= 10) {
@@ -83,6 +84,28 @@ if (phrasePredict.length <= 5) {
 } else if (phrasePredict.length >14) {
   predictNum = 8;
 }
+
+// Spaces to link gezWrd and phraseGuesses
+for (var p = 0; p < phrasePredict.length; p++){
+// Make space instead of an ____ for catchPhrases array
+  if(phrasePredict[p] === " "){
+    phraseGuesses.push(" ")
+  }
+  else{
+    guessingWord.push("_");
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*var clicks = 0;
