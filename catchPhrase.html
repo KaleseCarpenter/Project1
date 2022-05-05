@@ -33,12 +33,28 @@
     <div id="wordsScreen" class="textScreen"></div> 
     <p> <a id="pOneClicks">0</a></p> 
 <!-- A prompt or text box for the user to type the answer in, **ONE CHANCE-->
-     <div class="form">
+    <div class="col-lg-12 text-center pb-3">
+    <br>
+        <div><h5>Word:  <span id="currentWord"></span></h5></div>
+    <br>
+        <div><h6>Games Won:  <span id="totalWins" class="varColor"></span></h6></div>
+    
+        <div><h6>Guesses Left:  <span id="remainingGuesses" class="varColor"></span></h6></div>
+    
+        <div><h6>Already Guessed:  <span id="guessedLetters" class="varColor"></span></h6></div>
+
+     </div>
+
+
+
+
+
+        <div class="form">
         <label for="answerBox">Enter Your Answer: </label>
         <input type = "text" id = "answerBox" class = "answerBox">
         <input type = "submit" value = "Submit Answer" 
                class = "answerSubmit" id = "goodGuess">
-     </div>
+        </div>
 
 <br><br>
     
