@@ -26,23 +26,23 @@ catchPhrases = {
       let phraseGuesses = Object.keys(catchPhrases)
       // console.log it to see the answers
       console.log(phraseGuesses)
-    let phraseCaught = phraseGuesses[Math.floor(Math.random() * phraseGuesses.length)]
-      wordsScreen.innerHTML= phraseCaught
-      //this is counting the amount of time the player clicks the button, it will disable the button after 5 turns
-      clicks += .5;
-      document.getElementById("pOneClicks").innerHTML = clicks;
-      //if amount of clicks is = to 5 then disable the button, it's player 2's turn.
-      if (clicks === 6) {
-      document.getElementById("playerUno").disabled = true;
-        let playerDosTurn = prompt(" Player 2's Turn. You Ready? ");
+//     let phraseCaught = phraseGuesses[Math.floor(Math.random() * phraseGuesses.length)]
+//       wordsScreen.innerHTML= phraseCaught
+//       //this is counting the amount of time the player clicks the button, it will disable the button after 5 turns
+//       clicks += .5;
+//       document.getElementById("pOneClicks").innerHTML = clicks;
+//       //if amount of clicks is = to 5 then disable the button, it's player 2's turn.
+//       if (clicks === 6) {
+//       document.getElementById("playerUno").disabled = true;
+//         let playerDosTurn = prompt(" Player 2's Turn. You Ready? ");
 
-        if (playerDosTurn === "yes,Yes") {
-      let nextPLayer = document.querySelector(".playerTwo");
-    }
-    // catchPhrases.forEach((element)=>{
-    //   wordsScreen.innerHTML += 
-    // })
-};
+//         if (playerDosTurn === "yes,Yes") {
+//       let nextPLayer = document.querySelector(".playerTwo");
+//     }
+//     // catchPhrases.forEach((element)=>{
+//     //   wordsScreen.innerHTML += 
+//     // })
+// };
 
 
 // add counter to the Player1 button set = to 0 or 1, if counter = once they get to 5, next layer turn.
@@ -146,6 +146,3 @@ Announces the winner with an alert */
 
 
 /*Play again button to restart the game*/
-
-
-
