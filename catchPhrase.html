@@ -11,17 +11,36 @@
 <body>
     
 <!-------------Title of the game in pretty font -->
-<div class="tittle"><h1 class="title">Catch Phrase</h1></div>
+        <div class="tittle"><h1 class="title">Catch Phrase</h1></div>
+        <hr>     
+        <p id="para"></p>
+<br><br><br>
+        <button onclick="playBtn()" id="bttnPlay" class="beginPlay">Start Game</button>
+      
 
 
 <!--------Score keeper for each player, how to align these on each side-->
 
-    <!-- <div class="plyrsContainer">
-        <h5 class="playerOne">Player 1:  <span style="color:rgb(182, 94, 204);font-size:25px;"class="score"> 0 </span></h5>
-        <h5 class="playerOne">Player 2:  <span style="color:rgb(182, 94, 204);font-size:25px;"class="score"> 0 </span></h5>
-    </div>
-       -->
+  
         
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <!-- Possibly a timer if I can figure out how to get it to work right -->
@@ -30,31 +49,11 @@
    
     </div> -->
 <!-- ------ Text box for the Phrases to show up in  --> 
-    <div><h3>Games Won:  <span id="winsTtl" class=""></span></h3></div>
-
-    <div id="wordsScreen" class="textScreen"></div> 
+  
     <!-- <p> <a id="pOneClicks">0</a></p> -->
 <!-- A span tag to add styling to words-->
     
-    <div>
-    <br>
-
-
-        <div>Phrase:  <span id="currentWord"></span></div>
-    <br>
-        
-    
-        <div>Guesses Left:  <span id="guessesLeft" class=""></span></div>
-    
-        <div>Letters Guessed:  <span id="phraseGuesses" class=""></span></div>
-
-     </div>
-
-
-<br><br>
-    
-    <div class="btns">
-        <button onclick="playBtn()" id="playerUno" class="playerOne">PLAYER 1</button>
+   
         
         <!-- I have to find the function to get it to skip to next phrase,
              possible 1 chance to skip if they don't the answer -->

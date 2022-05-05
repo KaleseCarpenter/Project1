@@ -9,37 +9,34 @@
     height:20vh;
 }
 
-.plyrOneClicksHidden{
 
+
+.beginPlay{
+    display: block;
+     width: 70%;
+    border: none;
+    background-color: #9404aa;
+    color: white;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center
 }
 
-.answerBox{
-    border:solid rgb(9, 7, 11);
-    border-radius:15px;
-    color:rgb(102, 89, 116);
-    text-align:center;
-    padding:1em;
-    margin:1em;
-    height:2vh;
-}
-
-.form{
+#para{
     text-align: center;
+    font-size: larger;
 }
 
-.btns{
-    text-align:center;
-}
+​.beginPlay:hover {
+    background-color: #ddd;
+    color: black;
+  }
 
 .title{
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-align: center;
     font-size: 50px;
-}
-
-.plyrsContainer{
-    display: flex;
-    justify-content: space-around;
 }
 
 
