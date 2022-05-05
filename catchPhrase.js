@@ -18,7 +18,37 @@ var catchPhrases = [
   "make a long story short ",
   "you're pulling my leg",
   "feeling under the weather",
-  "time flies when you're having fun"
+  "time flies when you're having fun",
+  "that's the last straw",
+  "off the hook",
+  "actions speak louder than words",
+  "bite off more than you can chew",
+  "on thin ice",
+  "on cloud nine",
+  "through thick and thin",
+  "that ship has sailed",
+  "the pot calling the kettle black",
+  "calm before the storm",
+  "curiosity killed the cat",
+  "burn bridges",
+  "head in the clouds",
+  "not playing with a full deck",
+  "jump on the bandwagon",
+  "when in rome",
+  "like two peas in a pod",
+  "through thick and thin",
+  "it takes two to tango",
+  "straight from the horse's mouth",
+  "every dog has his day",
+  "keeping up with the joneses",
+  "if it ain't broke, don't fix it"
+
+
+
+
+
+
+
 
 ];
 
@@ -26,7 +56,7 @@ var gamesWon = 0;
 var phraseGuesses =[];
 var gezWrd= [];
 var usedGuessingWords = [];
-var predictWrd;
+var phrasePredict;
 var predictNum;
 
 
@@ -34,7 +64,25 @@ var predictNum;
 //Begin Playing
 function playerStart() {
 
+//Random word
+/*  Create a loop for the phrases so that it keeps showing new
+phrases after every answer until the Player 1 has reached 5 turns.*/
+// random value generated with Math.random()
+phrasePredict = catchPhrases[Math.floor(Math.random() * catchPhrases.length)].toUpperCase();
 
+// num of guess (higher or lower) depending on phrase length
+if (phrasePredict.length <= 5) {
+  predictNum = 3
+} else if (phrasePredict.length >5 && phrasePredict.length <= 7) {
+  // multiply by .5
+  predictNum = Math.floor(phrasePredict.length * .5)
+} else if (phrasePredict.length >7 && phrasePredict.length <= 10) {
+  predictNum = Math.floor(wordToMatch.length * .5)
+} else if (phrasePredict.length >10 && phrasePredict.length <= 14) {
+  predictNum = Math.floor(phrasePredict.length * .25)
+} else if (phrasePredict.length >14) {
+  predictNum = 8;
+}
 
 
 /*var clicks = 0;
@@ -64,10 +112,6 @@ function playerStart() {
 // add counter to the Player1 button set = to 0 or 1, if counter = once they get to 5, next layer turn.
 // if counter === 5 diplayer 2 turn.
 
-
-/*  Create a while loop for the phrases so that it keeps showing new
-phrases after every answer until the Player 1 has reached 5 turns.*/
-// random value generated with Math.random()
 
 
 

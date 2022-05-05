@@ -10,25 +10,25 @@
 </head>
 <body>
     
-<!-- ------------Title of the game in pretty font -->
-<h1 class="title">Catch Phrase</h1>
-<hr>
+<!-------------Title of the game in pretty font -->
+<div class="tittle"><h1 class="title">Catch Phrase</h1></div>
+
 
 <!--------Score keeper for each player, how to align these on each side-->
 
-    <div class="plyrsContainer">
+    <!-- <div class="plyrsContainer">
         <h5 class="playerOne">Player 1:  <span style="color:rgb(182, 94, 204);font-size:25px;"class="score"> 0 </span></h5>
         <h5 class="playerOne">Player 2:  <span style="color:rgb(182, 94, 204);font-size:25px;"class="score"> 0 </span></h5>
     </div>
-      
+       -->
         
 
 
 <!-- Possibly a timer if I can figure out how to get it to work right -->
-    <div><p>Timer</p></div>
+    <!-- <div><p>Timer</p></div>
 
    
-    </div>
+    </div> -->
 <!-- ------ Text box for the Phrases to show up in  --> 
     <div id="wordsScreen" class="textScreen"></div> 
     <p> <a id="pOneClicks">0</a></p> 
@@ -45,13 +45,13 @@
     <div class="btns">
         
         <button onclick="playBtn()" id="playerUno" class="playerOne">PLAYER 1</button>
-       
+        
         <!-- I have to find the function to get it to skip to next phrase,
              possible 1 chance to skip if they don't the answer -->
-        <button class="playerTwo"> PLAYER 2</button>
+        <!-- <button class="playerTwo"> PLAYER 2</button>
         <button id="letsPlay" class="restart">TIE BREAKER</button>
-    </div>
-    
+    </div> -->
+     
 
 <!-- A prompt that comes up at the end that tells who was the winner with the high score -->
 
@@ -60,6 +60,11 @@
 
 
 
-    <script src="catchPhrase.js"></script>
-</body>
+    <!-- <script src="catchPhrase.js"></script>
+<!- </body> 
 </html>
+
+
+<script src="catchPhrase.js"></script>
+</body>
+</html> 
