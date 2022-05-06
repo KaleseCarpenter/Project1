@@ -4,7 +4,7 @@
 //     Player1.addEventListener("click", playBtn);
 // const wordsScreen = document.getElementById("wordsScreen")
 
-// Start Game
+// **********************Start Game****************************************
 
 function playBtn() {
   let text;
@@ -21,7 +21,7 @@ function playBtn() {
   }
    setTimeout(resume,1000)
 }
-//Resume Game -- Player 1
+//*****************Resume Game -- Player 1***********************
 function resume() {
 
 
@@ -64,13 +64,16 @@ function resume() {
 } else {
     alert("Wrong Answer, Zero Points!" +
       "\nCorrect Answer: Actions speak louder than words");
-}  
+}   alert("It's Player 2's turn");
+setTimeout(playerTwoTurn,1000)
 }
 
-//Player 2 Questions
+//******************Player 2 Questions*******************
+function playerTwoTurn() {
 
-let q1 = prompt("Finish the phrase below" + "\nIf it ain't broke");
-    if (q1 == null || q1 == "don't fix it") {
+
+let ques1 = prompt("Finish the phrase below" + "\nIf it ain't broke");
+    if (ques1 == null || ques1 == "don't fix it") {
       alert("You got it " + person + "!" + " 10 Points");
   } else {
       alert(
@@ -78,56 +81,45 @@ let q1 = prompt("Finish the phrase below" + "\nIf it ain't broke");
     );
   }
 
-  let q2 = prompt("Finish the phrase below" + "\nBenefit of ");
-    if (q2 == null || q2 == "the doubt") {
+  let ques2 = prompt("Finish the phrase below" + "\nBenefit of ");
+    if (ques2 == null || ques2 == "the doubt") {
       alert("Woohoo! " + person + "!" + " 10 Points");
   } else {
       alert(
       "Wrong Answer, Zero Points!" + "\nCorrect Answer: Benefit of the doubt");
   }
 
-  let q3 = prompt("Finish the phrase below" + "\nThe pot calling");
-    if (q3 == null || q3 == "the kettle black") {
+  let ques3 = prompt("Finish the phrase below" + "\nThe pot calling");
+    if (ques3 == null || ques3 == "the kettle black") {
       alert("Woohoo! " + person + "!"+ " 10 Points");
   } else {
       alert("Wrong Answer, Zero Points!" +
         "\nCorrect Answer: The pot calling the kettle black");
   }
 
-  let q4 = prompt("Finish the phrase below" + "\nTime flies when");
-    if (q4 == null || q4 == "you're having fun") {
+  let ques4 = prompt("Finish the phrase below" + "\nTime flies when");
+    if (ques4 == null || ques4 == "you're having fun") {
       alert("Woohoo! " + person + "!"+ " 10 Points");
   } else {
       alert("Wrong Answer, Zero Points!" +
         "\nCorrect Answer: Time flies when you're having fun");
   }
 
-  let q5 = prompt("Finish the phrase below" + "\nCuriosity killed");
-  if (q5 == null || q5 == "the cat") {
+  let ques5 = prompt("Finish the phrase below" + "\nCuriosity killed");
+  if (ques5 == null || ques5 == "the cat") {
     alert("Woohoo! " + person + "!"+ " 10 Points");
 } else {
     alert("Wrong Answer, Zero Points!" +
       "\nCorrect Answer: Curiosity killed the cat");
-
+}
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//Show total score for both players on Screen
+ if player one's input  is equal to q1 
+ then add 10 points to score
+ if player two's input is equal to ques
+ then add 10 points to score
+ Use a boolean or mathMax to compare scores and get the winner
 // const addScoreToPlyrUno = () =>{
 //   playerOne.score += 10
 
@@ -143,7 +135,7 @@ let q1 = prompt("Finish the phrase below" + "\nIf it ain't broke");
 
 
 
-
+//************Play again -- Restart Game***********
 
 
 
