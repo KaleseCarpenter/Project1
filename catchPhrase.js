@@ -8,7 +8,7 @@
 
 function playBtn() {
   let text;
-  let person = prompt(" enter your name:", "Enter Your Name");
+  let person = prompt(" Enter your name:", "Enter Your Name");
     if (person == null || person == "") {
     text = "User cancelled the prompt.";
   } else {
@@ -21,11 +21,11 @@ function playBtn() {
   }
    setTimeout(resume,1000)
 }
-//Resume Game
+//Resume Game -- Player 1
 function resume() {
 
 
- let q1 = prompt("When it rains");
+ let q1 = prompt("Finish the phrase below" + "\nWhen it rains");
     if (q1 == null || q1 == "it pours") {
       alert("You got it " + person + "!" + " 10 Points");
   } else {
@@ -33,13 +33,15 @@ function resume() {
       "Wrong Answer, Zero Points!" + "\nCorrect Answer: When It rains it pours"
     );
   }
-  let q2 = prompt("Beating around");
+
+  let q2 = prompt("Finish the phrase below" + "\nBeating around");
     if (q2 == null || q2 == "the bush") {
       alert("Woohoo! " + person + "!" + " 10 Points");
   } else {
       alert(
       "Wrong Answer, Zero Points!" + "\nCorrect Answer: Beating around the bush");
   }
+
   let q3 = prompt("A blessing");
     if (q3 == null || q3 == "in disguise") {
       alert("Woohoo! " + person + "!"+ " 10 Points");
@@ -47,18 +49,82 @@ function resume() {
       alert("Wrong Answer, Zero Points!" +
         "\nCorrect Answer: A blessing in disguise ");
   }
-  let q4 = prompt("Skating on");
+
+  let q4 = prompt("Finish the phrase below" + "\nSkating on");
     if (q4 == null || q4 == "thin ice") {
       alert("Woohoo! " + person + "!"+ " 10 Points");
   } else {
       alert("Wrong Answer, Zero Points!" +
         "\nCorrect Answer: Skating on thin ice");
   }
-   
+
+  let q5 = prompt("Finish the phrase below" + "\nActions speak louder");
+  if (q5 == null || q5 == "than words") {
+    alert("Woohoo! " + person + "!"+ " 10 Points");
+} else {
+    alert("Wrong Answer, Zero Points!" +
+      "\nCorrect Answer: Actions speak louder than words");
+}  
+}
+
+//Player 2 Questions
+
+let q1 = prompt("Finish the phrase below" + "\nIf it ain't broke");
+    if (q1 == null || q1 == "don't fix it") {
+      alert("You got it " + person + "!" + " 10 Points");
+  } else {
+      alert(
+      "Wrong Answer, Zero Points!" + "\nCorrect Answer: If it ain't broke don't fix it"
+    );
+  }
+
+  let q2 = prompt("Finish the phrase below" + "\nBenefit of ");
+    if (q2 == null || q2 == "the doubt") {
+      alert("Woohoo! " + person + "!" + " 10 Points");
+  } else {
+      alert(
+      "Wrong Answer, Zero Points!" + "\nCorrect Answer: Benefit of the doubt");
+  }
+
+  let q3 = prompt("Finish the phrase below" + "\nThe pot calling");
+    if (q3 == null || q3 == "the kettle black") {
+      alert("Woohoo! " + person + "!"+ " 10 Points");
+  } else {
+      alert("Wrong Answer, Zero Points!" +
+        "\nCorrect Answer: The pot calling the kettle black");
+  }
+
+  let q4 = prompt("Finish the phrase below" + "\nTime flies when");
+    if (q4 == null || q4 == "you're having fun") {
+      alert("Woohoo! " + person + "!"+ " 10 Points");
+  } else {
+      alert("Wrong Answer, Zero Points!" +
+        "\nCorrect Answer: Time flies when you're having fun");
+  }
+
+  let q5 = prompt("Finish the phrase below" + "\nCuriosity killed");
+  if (q5 == null || q5 == "the cat") {
+    alert("Woohoo! " + person + "!"+ " 10 Points");
+} else {
+    alert("Wrong Answer, Zero Points!" +
+      "\nCorrect Answer: Curiosity killed the cat");
+
 }
 
 
-//  if(prompt === 5
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -68,7 +134,7 @@ function resume() {
 //   populateScore()
 // }
 
-// const addScoreToPlyrUno = () =>{
+// const addScoreToPlyrDos = () =>{
 //   playerOne.score += 10
 
 //   populateScore()
