@@ -6,36 +6,51 @@
 
 // **********************Start Game****************************************
 
+
 function playBtn() {
   let text;
-  let person = prompt(" Enter your name:", "Enter Your Name");
+   person = prompt("What is your name:", "Enter Your Name Here");
     if (person == null || person == "") {
-    text = "User cancelled the prompt.";
+    text = "No name Provided";
   } else {
     text =
       "Hello " +
       person +
-      ". You will be guessing the missing words from popular phrases. " +
+      " 👋😃. You will be guessing the missing words from popular phrases. " +
       "<br>GOOD LUCK!";
     document.getElementById("para").innerHTML = text;
   }
-   setTimeout(resume,1000)
+   setTimeout(resume,3000)
 }
 //*****************Resume Game -- Player 1***********************
-function resume() {
 
+var person = "";
+let playersTurn = true
+let playerScoreKeeper = {
+    true : 0,
+    false: 0
+}
 
+function resume() 
+
+{
  let q1 = prompt("Finish the phrase below" + "\nWhen it rains");
-    if (q1 == null || q1 == "it pours") {
+    if (q1 == "it pours") {
+      // player1 += 10
+      // console.log(q1)
       alert("You got it " + person + "!" + " 10 Points");
+      if(playersTurn === true){
+        playerScoreKeeper[playersTurn] += 10
+        document.querySelector('.pOneScore').innerHTML = playerScoreKeeper[playersTurn]
+      }
   } else {
       alert(
-      "Wrong Answer, Zero Points!" + "\nCorrect Answer: When It rains it pours"
+      "Wrong Answer, Zero Points!" + "\nCorrect Answer: When it rains it pours"
     );
   }
 
   let q2 = prompt("Finish the phrase below" + "\nBeating around");
-    if (q2 == null || q2 == "the bush") {
+    if (q2 == "the bush") {
       alert("Woohoo! " + person + "!" + " 10 Points");
   } else {
       alert(
@@ -43,7 +58,7 @@ function resume() {
   }
 
   let q3 = prompt("A blessing");
-    if (q3 == null || q3 == "in disguise") {
+    if (q3 == "in disguise") {
       alert("Woohoo! " + person + "!"+ " 10 Points");
   } else {
       alert("Wrong Answer, Zero Points!" +
@@ -51,7 +66,7 @@ function resume() {
   }
 
   let q4 = prompt("Finish the phrase below" + "\nSkating on");
-    if (q4 == null || q4 == "thin ice") {
+    if (q4 == "thin ice") {
       alert("Woohoo! " + person + "!"+ " 10 Points");
   } else {
       alert("Wrong Answer, Zero Points!" +
@@ -59,7 +74,7 @@ function resume() {
   }
 
   let q5 = prompt("Finish the phrase below" + "\nActions speak louder");
-  if (q5 == null || q5 == "than words") {
+  if (q5 == "than words") {
     alert("Woohoo! " + person + "!"+ " 10 Points");
 } else {
     alert("Wrong Answer, Zero Points!" +
@@ -73,7 +88,7 @@ function playerTwoTurn() {
 
 
 let ques1 = prompt("Finish the phrase below" + "\nIf it ain't broke");
-    if (ques1 == null || ques1 == "don't fix it") {
+    if ( ques1 == "don't fix it") {
       alert("You got it " + person + "!" + " 10 Points");
   } else {
       alert(
@@ -82,7 +97,7 @@ let ques1 = prompt("Finish the phrase below" + "\nIf it ain't broke");
   }
 
   let ques2 = prompt("Finish the phrase below" + "\nBenefit of ");
-    if (ques2 == null || ques2 == "the doubt") {
+    if (ques2 == "the doubt") {
       alert("Woohoo! " + person + "!" + " 10 Points");
   } else {
       alert(
@@ -90,7 +105,7 @@ let ques1 = prompt("Finish the phrase below" + "\nIf it ain't broke");
   }
 
   let ques3 = prompt("Finish the phrase below" + "\nThe pot calling");
-    if (ques3 == null || ques3 == "the kettle black") {
+    if (ques3 == "the kettle black") {
       alert("Woohoo! " + person + "!"+ " 10 Points");
   } else {
       alert("Wrong Answer, Zero Points!" +
@@ -98,7 +113,7 @@ let ques1 = prompt("Finish the phrase below" + "\nIf it ain't broke");
   }
 
   let ques4 = prompt("Finish the phrase below" + "\nTime flies when");
-    if (ques4 == null || ques4 == "you're having fun") {
+    if (ques4 == "you're having fun") {
       alert("Woohoo! " + person + "!"+ " 10 Points");
   } else {
       alert("Wrong Answer, Zero Points!" +
@@ -106,7 +121,7 @@ let ques1 = prompt("Finish the phrase below" + "\nIf it ain't broke");
   }
 
   let ques5 = prompt("Finish the phrase below" + "\nCuriosity killed");
-  if (ques5 == null || ques5 == "the cat") {
+  if (ques5 == "the cat") {
     alert("Woohoo! " + person + "!"+ " 10 Points");
 } else {
     alert("Wrong Answer, Zero Points!" +
@@ -114,13 +129,18 @@ let ques1 = prompt("Finish the phrase below" + "\nIf it ain't broke");
 }
 }
 
-//Show total score for both players on Screen
- if player one's input  is equal to q1 
- then add 10 points to score
- if player two's input is equal to ques
- then add 10 points to score
- Use a boolean or mathMax to compare scores and get the winner
-// const addScoreToPlyrUno = () =>{
+
+
+
+//******Show total score for both players on Screen******
+//  if player one's input  is equal to q1 
+//  then add 10 points to score
+//  if player two's input is equal to ques
+//  then add 10 points to score
+//  Use a boolean or mathMax to compare scores and get the winner
+
+
+ // const addScoreToPlyrUno = () =>{
 //   playerOne.score += 10
 
 //   populateScore()
