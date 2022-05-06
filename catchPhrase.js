@@ -41,6 +41,7 @@ function resume()
       alert("You got it " + person + "!" + " 10 Points");
       if(playersTurn === true){
         playerScoreKeeper[playersTurn] += 10
+        //adds points to the classList on Player 1 in HTML
         document.querySelector('.pOneScore').innerHTML = playerScoreKeeper[playersTurn]
       }
   } else {
