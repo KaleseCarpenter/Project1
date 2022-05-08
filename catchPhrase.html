@@ -11,45 +11,36 @@
 <body>
     
 <!-------------Title of the game in pretty font -->
-        <div class="tittle"><h1 class="title">Catch Phrase</h1></div>
-            <hr>     
-            <p id="para"></p>
-        <br><br><br>
-    <div class="container"> 
-        
-            <div onclick="populateScore()" class="player1"><button>Show Points <span>0</span></button></div>
-           
+    <div class="tittle"><h1 class="title">Catch Phrase</h1></div>
+                    
+        <p id="para"></p>
 
-        <div class="plyrPoints">
-            <p class="pOneScore">
-              Player 1 :
-              <span>0</span>
+    <br><br><br>
+
+    <!--------Score keeper for each player, how to align these on each side-->
+    <div class="container">
+        <div class="parent">
+            <p id="child" class="pOneScore">
+            Player 1 :
+                <span class="p1Score">0</span>
             </p>
-    
-            <p class="pTwoScore">
-              Player 2 :
-              <span>0</span>
+
+            <p id="child" class="pTwoScore">
+            Player 2 :
+                <span>0</span>
             </p>
-        </div>
-        
-
-
-
-
-
-
-
-
-        <div class="strtBtn">
-            <button onclick="playBtn()" id="bttnPlay" class="beginPlay">Start Game</button>
         </div>
     </div>
-      
+
+    <div id="wrapper">
+        <button type="button" onclick="startGame()" class="bttnStart" >Start Game</button>
+    </div>
+        
 <script src="catchPhrase.js"></script>
+<script src="app.js"></script>
 </body>
 </html> 
 
-<!--------Score keeper for each player, how to align these on each side-->
 
   
         

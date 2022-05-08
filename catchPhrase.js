@@ -5,131 +5,126 @@
 // const wordsScreen = document.getElementById("wordsScreen")
 
 // **********************Start Game****************************************
+// ******************START GAME*****************
+//  startGame() {
+// //   let text;
+// //    person = prompt("What is your name:", "Enter Your Name Here");
+// //     if (person == null || person == "") {
+// //     text = "No name Provided";
+// //   } else {
+// //     text =
+// //       "Hello " +
+// //       person +
+// //       " 👋😃. You will be guessing the missing words from popular phrases. " +
+// //       "<br>GOOD LUCK!";
+// //     document.getElementById("para").innerHTML = text;
+// //   }
+//    setTimeout(resume,3000)
+// }
 
 
-function playBtn() {
-  let text;
-   person = prompt("What is your name:", "Enter Your Name Here");
-    if (person == null || person == "") {
-    text = "No name Provided";
-  } else {
-    text =
-      "Hello " +
-      person +
-      " 👋😃. You will be guessing the missing words from popular phrases. " +
-      "<br>GOOD LUCK!";
-    document.getElementById("para").innerHTML = text;
+
+
+const startGame = () =>{
+  //   let text;
+  //  person = prompt("What is your name:", "Enter Your Name Here");
+  //   if (person == null || person == "") {
+  //   text = "No name Provided";
+  // } else {
+  //   text =
+  //     "Hello " +
+  //     person +
+  //     " 👋😃. You will be guessing the missing words from popular phrases. " +
+  //     "<br>GOOD LUCK!";
+  //   document.getElementById("para").innerHTML = text;
+  // }
+  ques1 = prompt(catchPhrases27.catchPhrases);   //this grabs phrase 34's question
+  if (ques1 === catchPhrases27.answer){   // this returns the corresponding answer to question 34
+      alert("You got it!" + " +10 Points");
+      addPoint() // this adds points to score after correct answer
+      console.log(score) // to check to see if score is logging
+  
+  }else {
+      alert("Wrong Answer, Zero Points!" + "\nHead in the clouds");
   }
-   setTimeout(resume,3000)
+  
+  ques2 = prompt(catchPhrases28.catchPhrases);
+  if (ques2 === catchPhrases28.answer){
+      alert("You got it!" + " +10 Points");
+      addPoint()
+      console.log(score)
+  }else {
+      alert("Wrong Answer, Zero Points!" + "\nNot playing with a full deck");
+  }
+
+  ques3 = prompt(catchPhrases29.catchPhrases);
+  if (ques3 === catchPhrases29.answer){
+      alert("You got it!" + " +10 Points");
+      addPoint()
+      console.log(score)
+  }else {
+      alert("Wrong Answer, Zero Points!" + "\nJump on the band wagon");
+  }
+  
+  ques4 = prompt(catchPhrases30.catchPhrases);
+  if (ques4 === catchPhrases30.answer){
+      alert("You got it!" + " +10 Points");
+      addPoint()
+      console.log(score)
+  }else {
+      alert("Wrong Answer, Zero Points!" + "\nLike two peas in a pod");
+  }
+
+  ques5 = prompt(catchPhrases31.catchPhrases);
+  if (ques5 === catchPhrases31.answer){
+      alert("You got it!" + " +10 Points");
+      addPoint()
+      console.log(score)
+  }else {
+      alert("Wrong Answer, Zero Points!" + "\nThrough thick and thin");
+  }
+      alert("G A M E  O V E R! \nIt's Player 2's turn");
+      // setTimeout(playerTwoTurn,1000)
+
 }
+
+
+//***********************Score Keeper***************************
+
+let score = 0
+let scoreKeeper = document.querySelector('.p1Score')
+
+const addPoint = () => {
+  
+  if (ques1 === catchPhrases27.answer) {
+      // let relevantTarget = document.querySelector(".counter");
+  scoreKeeper.innerHTML = score += 10   
+}
+}
+
+
+
 //*****************Resume Game -- Player 1***********************
 
-var person = "";
-let playersTurn = true
-let playerScoreKeeper = {
-    true : 0,
-    false: 0
-}
+// var person = "";
+// let playersTurn = true
+// let playerScoreKeeper = {
+//     true : 0,
+//     false: 0
+// }
 
-function resume() 
+// function resume() 
 
-{
- let q1 = prompt("Finish the phrase below" + "\nWhen it rains");
-    if (q1 == "it pours") {
-      // player1 += 10
-      // console.log(q1)
-      alert("You got it " + person + "!" + " 10 Points");
-      if(playersTurn === true){
-        playerScoreKeeper[playersTurn] += 10
-        //adds points to the classList on Player 1 in HTML
-        document.querySelector('.pOneScore').innerHTML = playerScoreKeeper[playersTurn]
-      }
-  } else {
-      alert(
-      "Wrong Answer, Zero Points!" + "\nCorrect Answer: When it rains it pours"
-    );
-  }
 
-  let q2 = prompt("Finish the phrase below" + "\nBeating around");
-    if (q2 == "the bush") {
-      alert("Woohoo! " + person + "!" + " 10 Points");
-  } else {
-      alert(
-      "Wrong Answer, Zero Points!" + "\nCorrect Answer: Beating around the bush");
-  }
 
-  let q3 = prompt("A blessing");
-    if (q3 == "in disguise") {
-      alert("Woohoo! " + person + "!"+ " 10 Points");
-  } else {
-      alert("Wrong Answer, Zero Points!" +
-        "\nCorrect Answer: A blessing in disguise ");
-  }
 
-  let q4 = prompt("Finish the phrase below" + "\nSkating on");
-    if (q4 == "thin ice") {
-      alert("Woohoo! " + person + "!"+ " 10 Points");
-  } else {
-      alert("Wrong Answer, Zero Points!" +
-        "\nCorrect Answer: Skating on thin ice");
-  }
 
-  let q5 = prompt("Finish the phrase below" + "\nActions speak louder");
-  if (q5 == "than words") {
-    alert("Woohoo! " + person + "!"+ " 10 Points");
-} else {
-    alert("Wrong Answer, Zero Points!" +
-      "\nCorrect Answer: Actions speak louder than words");
-}   alert("It's Player 2's turn");
-setTimeout(playerTwoTurn,1000)
-}
+
+// setTimeout(playerTwoTurn,1000)
+
 
 //******************Player 2 Questions*******************
-function playerTwoTurn() {
-
-
-let ques1 = prompt("Finish the phrase below" + "\nIf it ain't broke");
-    if ( ques1 == "don't fix it") {
-      alert("You got it " + person + "!" + " 10 Points");
-  } else {
-      alert(
-      "Wrong Answer, Zero Points!" + "\nCorrect Answer: If it ain't broke don't fix it"
-    );
-  }
-
-  let ques2 = prompt("Finish the phrase below" + "\nBenefit of ");
-    if (ques2 == "the doubt") {
-      alert("Woohoo! " + person + "!" + " 10 Points");
-  } else {
-      alert(
-      "Wrong Answer, Zero Points!" + "\nCorrect Answer: Benefit of the doubt");
-  }
-
-  let ques3 = prompt("Finish the phrase below" + "\nThe pot calling");
-    if (ques3 == "the kettle black") {
-      alert("Woohoo! " + person + "!"+ " 10 Points");
-  } else {
-      alert("Wrong Answer, Zero Points!" +
-        "\nCorrect Answer: The pot calling the kettle black");
-  }
-
-  let ques4 = prompt("Finish the phrase below" + "\nTime flies when");
-    if (ques4 == "you're having fun") {
-      alert("Woohoo! " + person + "!"+ " 10 Points");
-  } else {
-      alert("Wrong Answer, Zero Points!" +
-        "\nCorrect Answer: Time flies when you're having fun");
-  }
-
-  let ques5 = prompt("Finish the phrase below" + "\nCuriosity killed");
-  if (ques5 == "the cat") {
-    alert("Woohoo! " + person + "!"+ " 10 Points");
-} else {
-    alert("Wrong Answer, Zero Points!" +
-      "\nCorrect Answer: Curiosity killed the cat");
-}
-}
-
+// function playerTwoTurn() 
 
 
 
@@ -157,6 +152,72 @@ let ques1 = prompt("Finish the phrase below" + "\nIf it ain't broke");
 
 
 //************Play again -- Restart Game***********
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,4 +1,4 @@
-let pOneScore={
+let playerOne={
     score:0
 }
 // var randomPhrases =
