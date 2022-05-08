@@ -15,7 +15,7 @@
 
 .beginPlay{
     display: block;
-    width: 700px;
+    width: 300px;
     border-radius: 42px;
     background-color: #9404aa;
     color: white;
@@ -35,6 +35,9 @@
 ​.beginPlay:hover {
     background-color: #ddd;
     color: black;
+    display: flex;
+    align-items: center;
+    justify-content: c
   }
 
 .title{
@@ -65,5 +68,6 @@ h1 {
 .plyrPoints{
     justify-content: space-between;
 }
+
 
 
