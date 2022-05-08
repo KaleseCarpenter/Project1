@@ -1,4 +1,4 @@
-/*let pOneScore={
+let pOneScore={
     score:0
 }
 // var randomPhrases =
@@ -132,74 +132,56 @@
 //         answer: "bridges"
 // }
 
-// let catchPhrases27 = {
-//         catchPhrases: "head in the", 
-//         answer: "clouds"
-// }
+let catchPhrases27 = {
+        catchPhrases: "Head in the", 
+        answer: "clouds"
+}
 
-// let catchPhrases28 = {
-//         catchPhrases: "not playing with a full", 
-//         answer: "deck"
-// }
+let catchPhrases28 = {
+        catchPhrases: "Not playing with a full", 
+        answer: "deck"
+}
 
-// let catchPhrases29 = {
-//         catchPhrases: "jump on the band", 
-//         answer: "wagon"
-// }
+let catchPhrases29 = {
+        catchPhrases: "Jump on the band", 
+        answer: "wagon"
+}
 
-// let catchPhrases30 = {
-//         catchPhrases: "like two peas", 
-//         answer: "in a pod"
-// }
+let catchPhrases30 = {
+        catchPhrases: "Like two peas", 
+        answer: "in a pod"
+}
 
-// let catchPhrases31 = {
-//         catchPhrases: "through thick", 
-//         answer: "and thin"
-// }
+let catchPhrases31 = {
+        catchPhrases: "Through thick", 
+        answer: "and thin"
+}
 
-// let catchPhrases32 = {
-//         catchPhrases: "it takes __ ___ tango", 
-//         answer: "two to" 
-// }
+let catchPhrases32 = {
+        catchPhrases: "It takes __ ___ tango", 
+        answer: "two to" 
+}
 
-// let catchPhrases33 = {
-//         catchPhrases: "straight from the horse's", 
-//         answer: "mouth"
-// }
+let catchPhrases33 = {
+        catchPhrases: "Straight from the horse's", 
+        answer: "mouth"
+}
 
 let catchPhrases34 = {
-        catchPhrases: "every dog has", 
+        catchPhrases: "Every dog has", 
         answer: "his day"
 }
 
 let catchPhrases35 = {
-        catchPhrases: "keeping up with", 
+        catchPhrases: "Keeping up with", 
         answer: "the joneses"
 }
 
 let catchPhrases36 = {
-        catchPhrases: "if it ain't broke", 
+        catchPhrases: "If it ain't broke", 
         answer: "don't fix it"
 
 }
 
-let allCatchPhrases = [catchPhrases34,catchPhrases35,catchPhrases36]
+let allCatchPhrases = [catchPhrases27, catchPhrases28, catchPhrases29,catchPhrases30, catchPhrases31, catchPhrases32, catchPhrases33, catchPhrases34, catchPhrases35, catchPhrases36]
 
-
-
-//get random word
-const randomPhrases = () =>{
-   allCatchPhrases = Math.floor(Math.random() * catchPhrases.length)
-   console.log(allCatchPhrases);
-} 
-
-const startGame = () =>{
-    ques1 = prompt(catchPhrases34.catchPhrases);
-    if (ques1 === catchPhrases34.answer){
-        alert("You got it!" + " +10 Points");
-    }else {
-        alert(
-        "Wrong Answer, Zero Points!" + "\nCorrect Answer: When it rains it pours");
-    }
-    pOneScore.score += 10
-}*/
