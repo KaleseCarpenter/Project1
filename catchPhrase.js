@@ -21,7 +21,7 @@
 
 
 // ******************START GAME*****************
-const startGame = () => {
+var startGame = () => {
   //   let text;
   //  person = prompt("What is your name:", "Enter Your Name Here");
   //   if (person == null || person == "") {
@@ -34,85 +34,114 @@ const startGame = () => {
   //     "<br>GOOD LUCK!";
   //   document.getElementById("para").innerHTML = text;
   // }
-  ques1 = prompt(catchPhrases1.catchPhrases);   //this grabs phrase 34's question
-  if (ques1 === catchPhrases1.answer){   // this returns the corresponding answer to question 34
-      alert("You got it!" + " +10 Points");
-      addPoint() // this adds points to score after correct answer
-      console.log(score) // to check to see if score is logging
-  
-  }else {
-      alert("Wrong Answer, Zero Points!" + "\nWhen it rains it pours");
-  }
-  
-  ques2 = prompt(catchPhrases2.catchPhrases);
-  if (ques2 === catchPhrases2.answer){
-      alert("You got it!" + " +10 Points");
-      addPoint()
-      console.log(score)
-  }else {
-      alert("Wrong Answer, Zero Points!" + "\nIt's raining cats and dogs");
-  }
 
-  ques3 = prompt(catchPhrases3.catchPhrases);
-  if (ques3 === catchPhrases3.answer){
-      alert("You got it!" + " +10 Points");
-      addPoint()
-      console.log(score)
-  }else {
-      alert("Wrong Answer, Zero Points!" + "\nKill two birds with one stone");
-  }
+  // var ques1 = prompt(catchPhrases1.catchPhrases);
+  //   if (ques1 === catchPhrases1.answer) {
+  //     document.getElementById("para").innerText =
+  //     "You got it!" + " +10 Points";
+  //   }
+    
+  //   var ques2 = prompt(catchPhrases2.catchPhrases);
+  //   if (ques2 === catchPhrases2.answer) {
+  //     document.getElementById("para").innerText =
+  //     "You got it!" + " +10 Points";
+  //   }
+
+var randomPhrases = allCatchPhrases[Math.floor(Math.random() * randomPhrases.length)];
+console.log(randomPhrases);
+startGame();
+
+
+
+
+
+
+  // ques1 = prompt(catchPhrases1.catchPhrases);   //this grabs phrase 34's question
+  // if (ques1 === catchPhrases1.answer){   // this returns the corresponding answer to question 34
+  //     // document.getElementById("para").innerText = "You got it!" + " +10 Points"
+  //   // alert("You got it!" + " +10 Points");
+  //     addPoint() // this adds points to score after correct answer
+  //     console.log(score) // to check to see if score is logging
   
-  ques4 = prompt(catchPhrases4.catchPhrases);
-  if (ques4 === catchPhrases4.answer){
-      alert("You got it!" + " +10 Points");
-      addPoint()
-      console.log(score)
-  }else {
-      alert("Wrong Answer, Zero Points!" + "\nBeating around the bush");
-  }
-
-  ques5 = prompt(catchPhrases5.catchPhrases);
-  if (ques5 === catchPhrases5.answer){
-      alert("You got it!" + " +10 Points");
-      addPoint()
-      console.log(score)
-  }else {
-      alert("Wrong Answer, Zero Points!" + "\nBenefit of the doubt");
-  }
-      alert("G A M E  O V E R! \nIt's Player 2's turn");
-      // setTimeout(playerTwoTurn,3000)
-      alert("Player 2, Are you ready?");
-
-  //  ques6 = prompt(catchPhrases1.catchPhrases);
-  // if (ques6 === catchPhrases1.answer){
+  // }else {
+  //     alert("Wrong Answer, Zero Points!" + "\nWhen it rains it pours");
+  // }
+  
+  // ques2 = prompt(catchPhrases2.catchPhrases);
+  // if (ques2 === catchPhrases2.answer){
   //     alert("You got it!" + " +10 Points");
   //     addPoint()
   //     console.log(score)
   // }else {
-  //     alert("Wrong Answer, Zero Points!" + "\nWhen it rains it pours");
-  //     addPoint(twoScoreKeeper)
+  //     alert("Wrong Answer, Zero Points!" + "\nIt's raining cats and dogs");
   // }
+
+  // ques3 = prompt(catchPhrases3.catchPhrases);
+  // if (ques3 === catchPhrases3.answer){
+  //     alert("You got it!" + " +10 Points");
+  //     addPoint()
+  //     console.log(score)
+  // }else {
+  //     alert("Wrong Answer, Zero Points!" + "\nKill two birds with one stone");
+  // }
+  
+  // ques4 = prompt(catchPhrases4.catchPhrases);
+  // if (ques4 === catchPhrases4.answer){
+  //     alert("You got it!" + " +10 Points");
+  //     addPoint()
+  //     console.log(score)
+  // }else {
+  //     alert("Wrong Answer, Zero Points!" + "\nBeating around the bush");
+  // }
+
+  // ques5 = prompt(catchPhrases5.catchPhrases);
+  // if (ques5 === catchPhrases5.answer){
+  //     alert("You got it!" + " +10 Points");
+  //     addPoint()
+  //     console.log(score)
+  // }else {
+  //     alert("Wrong Answer, Zero Points!" + "\nBenefit of the doubt");
+  // }
+  //     alert("G A M E  O V E R! \nIt's Player 2's turn");
+  //     // setTimeout(playerTwoTurn,3000)
+    
+
+  
       
 }
-
-//******************Player 2 Questions*******************
-
 //***********************Score Keeper***************************
+// let score = 0
+// let oneScoreKeeper = document.querySelector('.p1Score')
+// let twoScoreKeeper = document.querySelector(".pTwoScore");
 
-let score = 0
-let oneScoreKeeper = document.querySelector('.p1Score')
-let twoScoreKeeper = document.querySelector(".pTwoScore");
-
-const addPoint = () => {
+// const addPoint = () => {
   
-  if (ques1 === catchPhrases1.answer) {
-      // let relevantTarget = document.querySelector(".counter");
-  oneScoreKeeper.innerHTML = score += 10   
-}
+//   if (ques1 === catchPhrases1.answer) {
+//       // let relevantTarget = document.querySelector(".counter");
+//   oneScoreKeeper.innerHTML = score += 10   
+// }
+// }
+
 //   if (q1 === catchPhrases1.answer){
 //   twoScoreKeeper.innerHTML = += 10
 // }
-}
+
+//******************Player 2 Questions*******************
+
+
+// alert("Player 2, Click Start");
+// ques6 = prompt(catchPhrases6.catchPhrases);
+//   if (ques6 === catchPhrases6.answer){
+//       alert("You got it!" + " +10 Points");
+//       addPoint()
+//       console.log(score)
+//   }else {
+//       alert("Wrong Answer, Zero Points!" + "\nWhen it rains it pours");
+  
+//   }
+
+
+
 
 
 // function playerTwoTurn() 
