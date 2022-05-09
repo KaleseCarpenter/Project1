@@ -99,7 +99,7 @@ body{
 
 .quiz-box .option-container .option{    
     background-color: beige;
-    padding: 15px;
+    padding:13px 15px;
     font-size: 16px;
     line-height:22px;
     color: #000000;
@@ -126,4 +126,38 @@ body{
     margin-right: 3px;/*moves the circles apart*/
     margin-top: 15px;  /*makes space between the bottom grey line and circles */
 
+}
+
+.result-box{
+    text-align: center;
+}
+
+.result-box.hide{
+    display: none;
+}
+
+.result-box h1{ /*This turns the Quiz result tittle color and more*/
+    font-size: 36px;
+    line-height: 42px;  
+    color:#4ab5ab
+}
+
+.result-box table{/*this makes the table wider and removes sapce in between rows*/
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px 0;
+}
+
+.result-box table td{ /*this puts a border around the table*/
+    border: 1px solid #cccccc;
+    padding: 8px 15px;
+    font-weight: 500;
+    color: #000000; /*table font color*/
+    width: 50%; /*Makes the table boxes evenly 50%*/
+    text-align: left;/*aligns table font*/
+    font-size: 20px;
+
+}
+.result-box .btn{
+    margin-right: 20px; /*aligns play again and go to home button*/
 }

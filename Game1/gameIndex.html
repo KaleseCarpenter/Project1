@@ -13,7 +13,7 @@
         <p>Total number of questions: <span class="total-question">5</span></p>
         <button type="button" class="btn">Start Game</button>
     </div>
-    <div class="quiz-box custom-box hide">
+    <div class="quiz-box custom-box">
         <div class="question-number"> Question 1 of 5 </div>
         <div class="question-text"> When it rains __ _____ </div>
         <div class="option-container">
@@ -35,14 +35,40 @@
         </div>
     </div>
 
-    <div class="result-box custom-box"></div>
-
-
-
-
-
-</body>
-
+    <div class="result-box custom-box hide">
+        <h1>Game Result</h1>
+        <table>
+            <tr>
+                <td>Total Question</td>
+                <td><span class= "total-queston">5</span></td>
+            </tr>
+            <tr>
+                <td>Attempt</td>
+                <td><span class= "total-attempt">4</span></td>
+            </tr>
+            <tr>
+                <td>Correct</td>
+                <td><span class= "total-correct">3</span></td>
+            </tr>
+            <tr>
+                <td>Wrong</td>
+                <td><span class= "total-wrong">1</span></td>
+            </tr>
+            <tr>
+                <td>Percentage</td>
+                <td><span class= "percentage">60.00%</span></td>
+            </tr>
+            <tr>
+                <td>Your Total Question</td>
+                <td><span class= "total-score">3</span></td>
+            </tr>
+        </table>
+        <button type="button" class="btn">Play Again</button>
+        <button type="button" class="btn">Go To Home</button>
+    </div>
+    
 <script src="gameApp.js"></script>
 <script src="app2.js"></script>
+
+</body>
 </html>
