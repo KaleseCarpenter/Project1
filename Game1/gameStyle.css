@@ -21,6 +21,17 @@ body{
     border-radius: 10px;
 }
 
+.custom-box::before, /************** look at this on inspect, this shows the custom box */
+.custom-box::after{
+    content: '';
+    clear: both;
+    display: table;
+}
+
+.custom-box.hide{
+    display: none; /*this is to hide and show boxes based on the class*/
+}
+
 .home-box h3{
     font-size: 18px;
     color: #000000;
@@ -54,6 +65,18 @@ body{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 16px;
     cursor: pointer;
+    display: inline-block;
+}
+
+.quiz-box .question-number,
+.quiz-box .question-text,
+.quiz-box .option-container,
+.quiz-box .next-question-btn,
+.quiz-box .answers-indicator{
+    width: 100%; /*Makese the answers stretch across the white box*/
+    float: left;
+
+
 }
 
 .quiz-box .question-number{
@@ -73,7 +96,7 @@ body{
     padding: 20px 0;
     margin: 0;
 }
-.quiz-box .option-container{}
+
 .quiz-box .option-container .option{    
     background-color: beige;
     padding: 15px;
@@ -81,8 +104,26 @@ body{
     line-height:22px;
     color: #000000;
     border-radius: 5px;
-    margin: 10px;
+    margin-bottom: 10px;
     cursor: pointer;
+    text-transform: lowercase; /*makes all answers lowercase*/
 }
 
-.quiz-box .answers-indicator{}
+.quiz-box .btn{
+    margin: 12px 0; /* moves the next button down a little  */
+}
+
+.quiz-box .answers-indicator{
+    border-top: 1px solid #cccccc;
+}
+
+.quiz-box .answers-indicator div{
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+    background-color:#a8d9d4; /*changes the color of the small circles grey */
+    border-radius: 50%; /*turns the squres into circles*/
+    margin-right: 3px;/*moves the circles apart*/
+    margin-top: 15px;  /*makes space between the bottom grey line and circles */
+
+}
