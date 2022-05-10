@@ -186,7 +186,7 @@ const randomPhrases = [
  {
         ques: "Knock on", 
         options:["wood","trees","doors","tables"],
-        answer: 
+        answer: 0
 },
 
  {
