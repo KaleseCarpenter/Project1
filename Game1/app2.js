@@ -1,193 +1,230 @@
-let playerOne={
-    score:0
-}
-// var randomPhrases =
-let catchPhrases1 = {
-        catchPhrases: "When it rains", 
-        answer: "it pours" 
-}    
+// let playerOne={
+//     score:0
+// }
 
-let catchPhrases2 = {
-        catchPhrases: "It's raining", 
-        answer: "cats and dogs"
-}
+const randomPhrases = [
+{
+        ques: "When it rains", 
+        options:["it bores","it pours","it pores","it's pouring"],
+        answer: 1
+}, 
 
-let catchPhrases3 = {
-        catchPhrases: "Kill two birds", 
-        answer: "with one stone"
-}
+{
+        ques: "It's raining", 
+        options:["cats and dogs","with a chance of meatballs","kittens and dog","cats and dolls"],
+        answer: 0
+},
 
-let catchPhrases4 = {
-        catchPhrases: "Beating around", 
-        answer: "the bush"
-}
+{
+        ques: "Kill two birds", 
+        options:["with a stone","with a trombone","with one stone","at once"],
+        answer: 2
+},
 
-let catchPhrases5 = {
-        catchPhrases: "Benefit of", 
-        answer:"the doubt"
-}
+{
+        ques: "Beating around", 
+        options:["the bucsh","big bushes","the bush","my bush"],
+        answer: 2
+},
 
-let catchPhrases6 = {
-        catchPhrases: "It's not _ science", 
-        answer:"rocket"
-}
+{
+        ques: "Benefit of", 
+        options:["the doubt","the trout","the gout","the day"],
+        answer: 0
+},
 
-let catchPhrases7 = {
-        catchPhrases: "___ ___ no gain", 
-        answer: "no pain"
-}     
+{
+        ques: "It's not ___ science", 
+        options:["chemical","rocket","bacteria","space ship"],
+        answer:1
+},
 
-let catchPhrases8 = {
-        catchPhrases: "A blessing", 
-        answer: "in disguise"
-}
+{
+        ques: "___ ___ no gain", 
+        options:["no rain","no work-out","no strain","no pain"],
+        answer: 3
+},   
 
-let catchPhrases9 = {
-        catchPhrases: "break a", 
-        answer: "leg"
-}
+{
+        ques: "A blessing", 
+        options:["in my eyes","in disguise","in his eyes","in the eyes"],
+        answer: 1
+},
 
-let catchPhrases10 = {
-        catchPhrases: "A dime", 
-        answer: "a dozen"
-}
+{
+        ques: "Break a __", 
+        options:["keg","head","leg","home"],
+        answer: 2
+},
 
-let catchPhrases11 = {
-        catchPhrases: "Make a long", 
-        answer: "story short"
-}
+ {
+        ques: "A dime", 
+        options:["a dozen","a truffle","a hustle","a nickle"],
+        answer: "0"
+},
 
-let catchPhrases12 = {
-        catchPhrases: "You're pulling", 
-        answer: "my leg"
-}
+ {
+        ques: "Make a long", 
+        options:["short story","day short","sentence short","story short"],
+        answer:3
+},
 
-let catchPhrases13 = {
-        catchPhrases: "Feeling under", 
-        answer: "the weather",
-}
+ {
+        ques: "You're pulling", 
+        options:["my leg","a game","my head","my bag"],
+        answer: 0
+},
 
-let catchPhrases14 = {
-        catchPhrases: "Time flies when", 
-        answer: "you're having fun"
-}
+ {
+        ques: "Feeling under __ _____", 
+        options:["the weather","the level","the bar","the bed"],
+        answer: 0
+},
 
-let catchPhrases15 = {
-        catchPhrases: "That's __ ___ straw", 
-        answer: "the last"
-}
+ {
+        ques: "Time flies when", 
+        options:["you're a dog","you're having fun","you're getting old","you're drinking gin"],
+        answer: 1
+},
 
-let catchPhrases16 = {
-        catchPhrases: "Off the", 
-        answer: "hook"
-}
+ {
+        ques: "That's ___ ___ straw", 
+        options:["the thick","the last","the best",""],
+        answer: 1
+},
 
-let catchPhrases17 = {
-        catchPhrases: "Actions speak louder", 
-        answer: "than words"
-}
+ {
+        ques: "Off the", 
+        options:["hook","dome-piece","bed","planet"],
+        answer: 0
+},
 
-let catchPhrases18 = {
-        catchPhrases: "Bite off more than you", 
-        answer: "can chew"
-}
+ {
+        ques: "Actions speak louder", 
+        options:["ya momma","than talking","than words","than yelling"],
+        answer: 2
+},
 
-let catchPhrases19 = {
-        catchPhrases: "Skating on", 
-        answer: "thin ice"
-}
+ {
+        ques: "Bite off more than you", 
+        options:["can chew","can eat","can think","can buy"],
+        answer: 0
+},
 
-let catchPhrases20 = {
-        catchPhrases: "On cloud", 
-        answer: "nine"
-}
+ {
+        ques: "Skating on", 
+        options:["thin rice","the curb","thin ice","my nerves"],
+        answer: 2
+},
 
-let catchPhrases21 = {
-        catchPhrases: "Through thick", 
-        answer: "and thin"
-}
+ {
+        ques: "On cloud", 
+        options:["nine","infinity","five","high"],
+        answer: 0
+},
 
-let catchPhrases22 = {
-        catchPhrases: "That ship", 
-        answer: " has sailed"
-}
+ {
+        ques: "Through thick", 
+        options:["and win","milkshakes n bakes","and thin","and slim"],
+        answer: 2
+},
 
-let catchPhrases23 = {
-        catchPhrases: "The pot calling", 
-        answer: "the kettle black"
-}
+ {
+        ques: "That ship", 
+        options:["has boarded","shot down","has sold","has sailed"],
+        answer: 3
+},
 
-let catchPhrases24 = {
-        catchPhrases: "Calm before", 
-        answer: "the storm"
-}
+ {
+        ques: "The pot calling", 
+        options:["the kettle fat","the kettle black","the nettle wack","the pan flat"],
+        answer: 1
+},
 
-let catchPhrases25 = {
-        catchPhrases: "Curiosity killed the", 
-        answer: "cat"
-}
+ {
+        ques: "Calm before", 
+        options:["dawn","the storm","the finale","the night"],
+        answer: 1
+},
 
-let catchPhrases26 = {
-        catchPhrases: "Burning", 
-        answer: "bridges"
-}
+ {
+        ques: "Curiosity killed the", 
+        options:["kitty","bat","cat","possum"],
+        answer: 2
+},
 
-let catchPhrases27 = {
-        catchPhrases: "Head in the", 
-        answer: "clouds"
-}
+ {
+        ques: "Burning", 
+        options:["bridges","britches","blisters","brigades"],
+        answer: 0
+},
 
-let catchPhrases28 = {
-        catchPhrases: "Not playing with a full", 
-        answer: "deck"
-}
+ {
+        ques: "Head in the", 
+        options:["window","hat","clouds","rafters"],
+        answer: 2
+},
 
-let catchPhrases29 = {
-        catchPhrases: "Jump on the band", 
-        answer: "wagon"
-}
+ {
+        ques: "Not playing with a full", 
+        options:["team","deck","neck","check"],
+        answer: 1
+},
 
-let catchPhrases30 = {
-        catchPhrases: "Like two peas", 
-        answer: "in a pod"
-}
+ {
+        ques: "Jump on the band", 
+        options:["stage","bus","game","wagon"],
+        answer: 3
+},
 
-let catchPhrases31 = {
-        catchPhrases: "Through thick", 
-        answer: "and thin"
-}
+ {
+        ques: "Like two peas", 
+        options:["in a pod","in a bowl","in stir-fry","a hot bod"],
+        answer: 0
+},
 
-let catchPhrases32 = {
-        catchPhrases: "It takes __ ___ tango", 
-        answer: "two to" 
-}
+ {
+        ques: "Knock on", 
+        options:["wood","trees","doors","tables"],
+        answer: 
+},
 
-let catchPhrases33 = {
-        catchPhrases: "Straight from the horse's", 
-        answer: "mouth"
-}
+ {
+        ques: "It takes __ ___ tango", 
+        options:["two too","too to","two to","two two"],
+        answer: 2 
+},
 
-let catchPhrases34 = {
-        catchPhrases: "Every dog has", 
-        answer: "his day"
-}
+ {
+        ques: "Straight from the horse's", 
+        options:["neck","mouth","hair","back"],
+        answer: 1
+},
 
-let catchPhrases35 = {
-        catchPhrases: "Keeping up with", 
-        answer: "the joneses"
-}
+ {
+        ques: "Every dog has", 
+        options:["his bae","his clay","his day","his stray"],
+        answer: 2
+},
 
-let catchPhrases36 = {
-        catchPhrases: "If it ain't broke", 
-        answer: "don't fix it"
+ {
+        ques: "Keeping up with", 
+        options:["the browns","the joneses","the jenners","the johnsons"],
+        answer: 1
+},
 
-}
+ {
+        ques: "If it ain't broke", 
+        options:["don't mix it","don't trick it","don't dish it","don't fix it"],
+        answer: 3
+},
 
-let allCatchPhrases = [catchPhrases1, catchPhrases2, catchPhrases3, catchPhrases4, 
-    catchPhrases5, catchPhrases6, catchPhrases7, catchPhrases8, catchPhrases9, catchPhrases10, 
-    catchPhrases11, catchPhrases12, catchPhrases13, catchPhrases14, catchPhrases15, 
-    catchPhrases16, catchPhrases17, catchPhrases18, catchPhrases19, catchPhrases20,
-    catchPhrases21, catchPhrases22, catchPhrases23, catchPhrases24, catchPhrases25, 
-    catchPhrases26, catchPhrases27, catchPhrases28, catchPhrases29,catchPhrases30, 
-    catchPhrases31, catchPhrases32, catchPhrases33, catchPhrases34, catchPhrases35,
-     catchPhrases36]
+]
+// let allques = [ques1, ques2, ques3, ques4, 
+//     ques5, ques6, ques7, ques8, ques9, ques10, 
+//     ques11, ques12, ques13, ques14, ques15, 
+//     ques16, ques17, ques18, ques19, ques20,
+//     ques21, ques22, ques23, ques24, ques25, 
+//     ques26, ques27, ques28, ques29,ques30, 
+//     ques31, ques32, ques33, ques34, ques35,
+//      ques36]
