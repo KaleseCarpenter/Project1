@@ -1,39 +1,20 @@
 // Create a function to start the game with the play button and display random phrase
 
 
-// **********************Start Game****************************************
-//  startGame() {
-// //   let text;
-// //    person = prompt("What is your name:", "Enter Your Name Here");
-// //     if (person == null || person == "") {
-// //     text = "No name Provided";
-// //   } else {
-// //     text =
-// //       "Hello " +
-// //       person +
-// //       " 👋😃. You will be guessing the missing words from popular phrases. " +
-// //       "<br>GOOD LUCK!";
-// //     document.getElementById("para").innerHTML = text;
-// //   }
-//    setTimeout(resume,3000)
-// }
-
-
-
 // ******************START GAME*****************
 var startGame = () => {
-  //   let text;
-  //  person = prompt("What is your name:", "Enter Your Name Here");
-  //   if (person == null || person == "") {
-  //   text = "No name Provided";
-  // } else {
-  //   text =
-  //     "Hello " +
-  //     person +
-  //     " 👋😃. You will be guessing the missing words from popular phrases. " +
-  //     "<br>GOOD LUCK!";
-  //   document.getElementById("para").innerHTML = text;
-  // }
+    let text;
+   person = prompt("What is your name:", "Enter Your Name Here");
+    if (person == null || person == "") {
+    text = "No name Provided";
+  } else {
+    text =
+      "Hello " +
+      person +
+      " 👋😃. Each player will be guessing the missing words from popular phrases. " +
+      "<br>GOOD LUCK!";
+    document.getElementById("para").innerHTML = text;
+  }
 
   // var ques1 = prompt(catchPhrases1.catchPhrases);
   //   if (ques1 === catchPhrases1.answer) {
@@ -46,13 +27,6 @@ var startGame = () => {
   //     document.getElementById("para").innerText =
   //     "You got it!" + " +10 Points";
   //   }
-
-
-
-
-
-
-
 
   ques1 = prompt("Finish the phrase below\n" + catchPhrases1.catchPhrases);   //this grabs phrase 34's question
   if (ques1 === catchPhrases1.answer){   // this returns the corresponding answer to question 34
@@ -100,13 +74,32 @@ var startGame = () => {
   }else {
       alert("Wrong Answer, Zero Points!" + "\nBenefit of the doubt");
   }
-      alert("G A M E  O V E R! \nIt's Player 2's turn");
-  //     // setTimeout(playerTwoTurn,3000)
-    
+    alert("G A M E  O V E R! \nIt's Player 2's turn");
+    // setTimeout("alert('Player 2, Are you ready?')", 2000);
+// function myFunction() {
+//   timeout = setTimeout(alertFunc, 3000);
+// }
 
+// function alertFunc() {
+//   alert("Player 2, Are you ready?!");
+// }
+
+
+
+
+  ques6 = prompt(catchPhrases6.catchPhrases);
+  if (ques6 === catchPhrases6.answer){
+      alert("You got it!" + " +10 Points");
+      addPoint()
+      console.log(score)
+  }else {
+      alert("Wrong Answer, Zero Points!" + "\nIt's not rocket science");
+  }
   
       
 }
+
+
 //***********************Score Keeper***************************
 let score = 0
 let oneScoreKeeper = document.querySelector('.p1Score')
@@ -118,8 +111,16 @@ const addPoint = () => {
       // let relevantTarget = document.querySelector(".counter");
   oneScoreKeeper.innerHTML = score += 10   
 }
-}
+// if (ques6 === catchPhrases6.answer){
 
+// twoScoreKeeper.innerHTML = score += 10
+// }
+
+}    
+
+// window.onload = startGame(){
+//     addPoint();
+// }
 //   if (q1 === catchPhrases1.answer){
 //   twoScoreKeeper.innerHTML = += 10
 // }
@@ -140,18 +141,7 @@ const addPoint = () => {
 
 
 
-
-
 // function playerTwoTurn() 
-
-
-
-
-
-
-
-
-
 
 //*****************Resume Game -- Player 1***********************
 
@@ -166,13 +156,7 @@ const addPoint = () => {
 
 
 
-
-
-
 // setTimeout(playerTwoTurn,1000)
-
-
-
 
 
 //******Show total score for both players on Screen******
@@ -200,16 +184,6 @@ const addPoint = () => {
 
 //************Play again -- Restart Game***********
 
-
-
-
-
-
-
-
-
-
-
 // while(catchPhrases.length) {
 //   const question = randomQuestions();
 //   const askedQuestion = prompt(question.question);
@@ -220,12 +194,6 @@ const addPoint = () => {
 //   }
 // }
 // const askQuestions = prompt(question);
-
-
-
-
-
-
 
 
 

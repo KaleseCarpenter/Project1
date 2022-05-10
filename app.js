@@ -28,8 +28,8 @@ let catchPhrases5 = {
 }
 
 let catchPhrases6 = {
-        catchPhrases: "It's not _ science", 
-        answer:"rocket"
+        catchPhrases: "It's not rocket __", 
+        answer:"science"
 }
 
 let catchPhrases7 = {
