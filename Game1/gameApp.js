@@ -27,11 +27,24 @@ function getNewQues(){
     //set question text
     //get random question
     const questionIndex = availableQues[Math.floor(Math.random() * availableQues.length)]
+    currentQues = questionIndex;
+    quesText.innerHTML = currentQues.ques; //.ques is the key name for questions
+    // console.log(questionIndex)
+    //get the position of the 'questionIndex' from the availableQues array;
+    const index1 = availableQues.indexOf(questionIndex);
+    console.log(index1)
     console.log(questionIndex)
-
-
+    quesCounter++
 }
 
+function next(){
+    if(quesCounter === 5){
+        prompt("game over")
+    }
+    else{
+        getNewQues();
+    }
+}
 
 window.onload = function(){ // this function will be called when the window's load function event fires.
     //********1st set all catch phrase questions in availableQues array
