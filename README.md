@@ -12,3 +12,5 @@ I used Javascript to create an array of objects for all of the catchPhrases with
 
 CSS
 I used two key frames for the title on the page in my CSS.
+
+** I am still updating this project
